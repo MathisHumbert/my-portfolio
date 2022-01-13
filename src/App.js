@@ -1,13 +1,13 @@
 import About from './sections/About';
 import Footer from './sections/Footer';
-import Navbar from './sections/Navbar';
+import Header from './sections/Header';
 import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 
 const App = () => {
   return (
     <>
-      <Navbar />
+      <Header />
       <About />
       <Projects />
       <Skills />
