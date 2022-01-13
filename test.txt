@@ -1,0 +1,204 @@
+import { useEffect, useRef, useState } from 'react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+let scrollHorizontal = (elem, container) => {
+  gsap.to(elem, {
+    xPercent: -100 * (elem.length - 1),
+    ease: 'none',
+    scrollTrigger: {
+      // start: 'top top',
+      trigger: container,
+      pin: true,
+      scrub: true,
+      markers: true,
+
+      end: () => `+=${container.offsetWidth}`,
+    },
+  });
+};
+
+function App() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
+    <div className='main-container'>
+      <section className='box-1'>
+        <h1>Section One</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          nulla dolorem qui accusamus similique consequatur laborum temporibus
+          incidunt blanditiis dignissimos, pariatur modi ut asperiores animi
+          provident fuga. Excepturi laborum voluptate rerum aut facere maiores.
+          Dolore quod error ducimus dicta minus porro aut. Atque in vel autem,
+          incidunt modi quidem at?
+        </p>
+      </section>
+      <Hor />
+      <Ver />
+      <section className='box-5'>
+        <h1>Section Five</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          nulla dolorem qui accusamus similique consequatur laborum temporibus
+          incidunt blanditiis dignissimos, pariatur modi ut asperiores animi
+          provident fuga. Excepturi laborum voluptate rerum aut facere maiores.
+          Dolore quod error ducimus dicta minus porro aut. Atque in vel autem,
+          incidunt modi quidem at?
+        </p>
+      </section>
+    </div>
+  );
+}
+
+const Hor = () => {
+  useEffect(() => {
+    let sections = gsap.utils.toArray('.hor-box');
+    let container = document.querySelector('.horizontal-container');
+    scrollHorizontal(sections, container);
+  }, []);
+  return (
+    <div className='horizontal-container'>
+      <section className='box-2 hor-box'>
+        <h1>Section Two</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          nulla dolorem qui accusamus similique consequatur laborum temporibus
+          incidunt blanditiis dignissimos, pariatur modi ut asperiores animi
+          provident fuga. Excepturi laborum voluptate rerum aut facere maiores.
+          Dolore quod error ducimus dicta minus porro aut. Atque in vel autem,
+          incidunt modi quidem at?
+        </p>
+      </section>
+      <section className='box-3 hor-box'>
+        <h1>Section Three</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          nulla dolorem qui accusamus similique consequatur laborum temporibus
+          incidunt blanditiis dignissimos, pariatur modi ut asperiores animi
+          provident fuga. Excepturi laborum voluptate rerum aut facere maiores.
+          Dolore quod error ducimus dicta minus porro aut. Atque in vel autem,
+          incidunt modi quidem at?
+        </p>
+      </section>
+      <section className='box-4 hor-box'>
+        <h1>Section Four</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          nulla dolorem qui accusamus similique consequatur laborum temporibus
+          incidunt blanditiis dignissimos, pariatur modi ut asperiores animi
+          provident fuga. Excepturi laborum voluptate rerum aut facere maiores.
+          Dolore quod error ducimus dicta minus porro aut. Atque in vel autem,
+          incidunt modi quidem at?
+        </p>
+      </section>
+    </div>
+  );
+};
+
+const Ver = () => {
+  return (
+    <div className='vertical-container'>
+      <section className='box-2'>
+        <h1>Section Two</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          nulla dolorem qui accusamus similique consequatur laborum temporibus
+          incidunt blanditiis dignissimos, pariatur modi ut asperiores animi
+          provident fuga. Excepturi laborum voluptate rerum aut facere maiores.
+          Dolore quod error ducimus dicta minus porro aut. Atque in vel autem,
+          incidunt modi quidem at?
+        </p>
+      </section>
+      <section className='box-3'>
+        <h1>Section Three</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          nulla dolorem qui accusamus similique consequatur laborum temporibus
+          incidunt blanditiis dignissimos, pariatur modi ut asperiores animi
+          provident fuga. Excepturi laborum voluptate rerum aut facere maiores.
+          Dolore quod error ducimus dicta minus porro aut. Atque in vel autem,
+          incidunt modi quidem at?
+        </p>
+      </section>
+      <section className='box-4'>
+        <h1>Section Four</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          nulla dolorem qui accusamus similique consequatur laborum temporibus
+          incidunt blanditiis dignissimos, pariatur modi ut asperiores animi
+          provident fuga. Excepturi laborum voluptate rerum aut facere maiores.
+          Dolore quod error ducimus dicta minus porro aut. Atque in vel autem,
+          incidunt modi quidem at?
+        </p>
+      </section>
+    </div>
+  );
+};
+
+export default App;
+
+
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section h1 {
+  font-size: 4rem;
+}
+section p {
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  max-width: 700px;
+}
+
+.box-1 {
+  background: red;
+}
+.box-2 {
+  background: blue;
+}
+.box-3 {
+  background: yellow;
+}
+.box-4 {
+  background: green;
+}
+.box-5 {
+  background: orange;
+}
+
+.horizontal-container {
+  height: 100%;
+  width: 300%;
+  display: none;
+  flex-wrap: nowrap;
+}
+
+@media screen and (min-width: 700px) {
+  .horizontal-container {
+    display: flex;
+  }
+
+  .vertical-container {
+    display: none;
+  }
+}
