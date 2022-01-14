@@ -1,5 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+let scrollHorizontal = (elem, container) => {
+  gsap.to(elem, {
+    xPercent: -100 * (elem.length - 1),
+    ease: 'none',
+    scrollTrigger: {
+      trigger: container,
+      pin: true,
+      scrub: true,
+      markers: true,
+
+      end: () => `+=${container.offsetWidth}`,
+    },
+  });
+};
 
 const projects = [
   {
@@ -27,7 +46,7 @@ const projects = [
 
 const SingleProject = ({ src, category, subtitle, title }) => {
   return (
-    <Article>
+    <Article className='single-project'>
       <div />
       <div className='project-item'>
         <div className='info'>
@@ -97,10 +116,16 @@ const Article = styled.article`
 
 const Projects = () => {
   const [counter, setCounter] = useState(1);
+  useEffect(() => {
+    let sections = gsap.utils.toArray('.single-project');
+    let container = document.querySelector('.horizontal-container');
+    console.log(sections, container);
+    // scrollHorizontal(sections, container);
+  }, []);
 
   const handleCounter = (id) => setCounter(id);
   return (
-    <Wrapper className='section'>
+    <Wrapper className='section horizontal-container'>
       <div className='counter'>
         <span>{counter}</span>
         <span className='divider'></span>
