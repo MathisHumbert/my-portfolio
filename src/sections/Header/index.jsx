@@ -2,12 +2,7 @@ import styled from 'styled-components';
 
 const Header = () => {
   return (
-    <Wrapper>
-      <nav>
-        <h4>fr / en</h4>
-        <h4>mathis humbert</h4>
-        <h4>projects</h4>
-      </nav>
+    <Wrapper className='section'>
       <ul>
         <li>
           <span>01 / </span>intro
@@ -26,8 +21,7 @@ const Header = () => {
         </li>
       </ul>
       <h1>
-        développeur <br /> front end <br />
-        react
+        dev <br /> front end
       </h1>
       <p>autodidact</p>
     </Wrapper>
@@ -35,34 +29,24 @@ const Header = () => {
 };
 
 const Wrapper = styled.header`
-  min-height: 50vh;
-  height: 100%;
   position: relative;
-  border: 1px solid red;
   text-transform: uppercase;
-
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 18px 0;
-  }
-
-  h4 {
-    font-family: var(--font-bai);
-    font-weight: 600;
-    font-size: 4vw;
-    text-align: center;
-  }
+  border: 1px solid red;
+  padding-bottom: 195px;
 
   ul {
     position: absolute;
-    top: calc(250px + 10vw);
+    left: 0;
+    top: calc(100px + 24vw);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
     li {
-      font-size: 16px;
+      font-size: 14px;
       font-family: var(--font-synco);
-      font-weight: 700;
-      margin: 10px 0;
+      font-weight: 600;
+      color: var(--dark-grey-color);
 
       span {
         font-family: var(--font-bai);
@@ -72,22 +56,20 @@ const Wrapper = styled.header`
 
   p {
     position: absolute;
-    top: calc(234px + 10vw);
+    top: 0;
     right: 0;
     transform: rotate(-90deg);
     transform-origin: right bottom;
-    font-size: 16px;
+    font-size: 14px;
     font-family: var(--font-synco);
-    font-weight: 700;
-    margin: 10px 0;
+    font-weight: 600;
+    color: var(--dark-grey-color);
   }
 
   h1 {
     font-family: var(--font-bai);
     text-align: center;
-    font-size: 10vw;
-    line-height: 10vw;
-    margin-top: 50px;
+    font-size: 13vw;
     font-weight: 600;
   }
 `;

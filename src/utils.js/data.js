@@ -5,51 +5,134 @@ import {
   SiJavascript,
   SiRedux,
   SiStyledcomponents,
-  SiSass,
   SiReact,
+  SiPostman,
+  SiExpress,
+  SiMongodb,
+  SiNodedotjs,
+  SiVisualstudiocode,
+  SiGit,
+  SiWindowsterminal,
+  SiNetlify,
+  SiHeroku,
 } from 'react-icons/si';
+
+export const skillsHeaderData = [
+  {
+    id: 1,
+    title: 'front end',
+  },
+  {
+    id: 2,
+    title: 'back end',
+  },
+  {
+    id: 3,
+    title: 'global',
+  },
+];
 
 export const frontEndData = [
   {
+    id: 1,
     title: 'HTML',
     icon: <SiHtml5 />,
-    level: 90,
-    text: `Trés bonne maitrise du html, même si depuis que j'utilise le JSX et je manipule moins de gros fichier HTML`,
+    color: '#f06529',
   },
   {
+    id: 2,
     title: 'CSS',
     icon: <SiCss3 />,
-    level: 90,
-    text: `J'utilise le CSS depuis que j'ai commencé apprendre le code, avec le HTML c'est le langugage avec lequel j'ai début le front end . Je suis donc très a l'aise avec car je l'utilise dans tous mes projets`,
+    color: '#2965f1',
   },
   {
+    id: 3,
     title: 'Sass',
     icon: <SiSass />,
-    level: 70,
-    text: `J'utilise le Sass lorsque j'ai commencé à avoir des fichiers html à rallonge. Cela m'a permis de mieux organiser mes fichies de style et d'utiliser le nesting`,
+    color: '#cc6699',
   },
   {
+    id: 4,
     title: 'Javascript',
     icon: <SiJavascript />,
-    level: 95,
-    text: `Je suis extrèmement confortable avec le JavaScript, j'ai réalisé un grand nombre de projet en utilise ce langague. On m'a troujours conseillé de construitre le maximum de projet et d'être vraiement à l'aise avec ce dernier avant de passer à un framework de JS`,
+    color: '#f0db4f',
   },
   {
+    id: 5,
     title: 'React',
     icon: <SiReact />,
-    level: 85,
-    text: `Je travail exclusivement avec React depuis plusieurs mois maitenant. J'ai commencé à l'utilser lorsque j'avais de très nombreux fichier javascript! J'adore ce dernier et je l'ai très vite maitrisé `,
+    color: '#61dbfb',
   },
   {
-    title: <SiRedux />,
-    icon: '',
-    level: 80,
-    text: `Lorsque j'apprenais React mon instructeur utilsait exclusivment l'API Context de React qui est excelent et que je maitrise très bien. Mais ensuite j'ai découvert Redux qui a une utilisation très proche de celle de l'API Context. Je l'utilise quasiment dans tous mes projects de grandes tailles`,
+    id: 6,
+    title: 'Redux',
+    icon: <SiRedux />,
+    color: '#764abc',
   },
   {
-    title: 'Styled Components',
+    id: 7,
+    title: 'Styled C.',
     icon: <SiStyledcomponents />,
-    level: 80,
-    text: `J'utilise Styled Components depuis peu de temps, mais je peu deja plus m'en passer. Avec un bon fichier css qui gère les styles golbals cet outil devient très puissant.`,
+    color: '#222',
+  },
+];
+
+export const backEndData = [
+  {
+    id: 1,
+    title: 'NodeJS',
+    icon: <SiNodedotjs />,
+    color: '#83ba63',
+  },
+  {
+    id: 2,
+    title: 'Express',
+    icon: <SiExpress />,
+    color: '#222',
+  },
+  {
+    id: 3,
+    title: 'MongoDB',
+    icon: <SiMongodb />,
+    color: '#3fa037',
+  },
+  {
+    id: 4,
+    title: 'Postman',
+    icon: <SiPostman />,
+    color: '#ef5b25',
+  },
+];
+
+export const globalSkillsData = [
+  {
+    id: 1,
+    title: 'VS Code',
+    icon: <SiVisualstudiocode />,
+    color: '#0078d7',
+  },
+  {
+    id: 2,
+    title: 'Git',
+    icon: <SiGit />,
+    color: '#f34f29',
+  },
+  {
+    id: 3,
+    title: 'Terminal',
+    icon: <SiWindowsterminal />,
+    color: '#222',
+  },
+  {
+    id: 4,
+    title: 'Netlify',
+    icon: <SiNetlify />,
+    color: '#20b2aa',
+  },
+  {
+    id: 5,
+    title: 'Heroku',
+    icon: <SiHeroku />,
+    color: '#6762A6',
   },
 ];

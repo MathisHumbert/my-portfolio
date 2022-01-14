@@ -23,11 +23,18 @@
 }
 
 body {
-  background: var(--dark-color-2);
-  color: var(--grey-color);
+  background: #f5f0ec;
   font-family: var(--font-pop);
 }
 
 .section {
   padding: 50px 0;
+}
+
+.section-header {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: 'Syncopate', sans-serif;
+  color: #626262;
 }

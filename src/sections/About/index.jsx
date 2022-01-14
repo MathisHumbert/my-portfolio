@@ -6,11 +6,11 @@ const About = () => {
   return (
     <Wrapper className='section'>
       <div className='left'>
-        <h4>moi</h4>
+        <h2>moi</h2>
         <img src={img} alt='mathis-img' />
       </div>
       <div className='right'>
-        <h4>compétence</h4>
+        <h2>compétence</h2>
         <Skills />
       </div>
     </Wrapper>
@@ -19,26 +19,14 @@ const About = () => {
 
 const Wrapper = styled.section`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 5vw;
 
-  h4 {
-    font-size: 16px;
-    font-family: var(--font-synco);
-    font-weight: 600;
+  h2 {
+    font-size: 22px;
     text-transform: uppercase;
-  }
-
-  h5 {
-    font-size: 14px;
-    font-family: var(--font-synco);
-    font-weight: 600;
-    text-transform: uppercase;
-
-    span {
-      font-family: var(--font-bai);
-    }
+    font-weight: 500;
   }
 
   .left {
@@ -50,9 +38,9 @@ const Wrapper = styled.section`
       object-fit: cover;
     }
   }
+
   .right {
-    border: 1px solid blue;
-    height: 1000px;
+    justify-self: flex-end;
   }
 `;
 export default About;
