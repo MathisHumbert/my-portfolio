@@ -5,7 +5,7 @@ import {
   backEndData,
   skillsHeaderData,
   globalSkillsData,
-} from '../../utils.js/data';
+} from '../../utils/data';
 import SingleSkill from './SingleSkill';
 
 const Skills = () => {

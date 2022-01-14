@@ -17,6 +17,8 @@ import {
   SiHeroku,
 } from 'react-icons/si';
 
+import images from '../assets';
+console.log(images);
 export const skillsHeaderData = [
   {
     id: 1,
@@ -134,5 +136,32 @@ export const globalSkillsData = [
     title: 'Heroku',
     icon: <SiHeroku />,
     color: '#6762A6',
+  },
+];
+
+export const projectsData = [
+  {
+    id: 1,
+    src: images.project1,
+    title: 'MERN Project',
+    subtitle: 'Invoice App',
+    category: 'Full Stack Project / Frontend Mentor',
+    tech: 'React / Redux / Styled Components / NodeJS / Express / MongooDB',
+  },
+  {
+    id: 2,
+    src: images.project2,
+    title: 'Full Stack JavaScript',
+    subtitle: 'Product Feedback',
+    category: 'Full Stack Project / Frontend Mentor',
+    tech: 'JavaScirpt / Sass / HTML / NodeJS / Express / MongooDB',
+  },
+  {
+    id: 3,
+    src: images.project3,
+    title: 'React Landing Page',
+    subtitle: 'Skillex',
+    category: 'Front End Project / cloned website from Dribbble',
+    tech: 'React / Styled Components / GSAP',
   },
 ];

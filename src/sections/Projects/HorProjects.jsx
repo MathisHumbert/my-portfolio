@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { projectsData } from '../../utils/data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,33 +21,6 @@ let scrollHorizontal = (elem, container) => {
   });
 };
 
-const projects = [
-  {
-    id: 1,
-    src: 'https://images.unsplash.com/photo-1566204773863-cf63e6d4ab88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1345&q=100',
-    title: 'MERN Project',
-    subtitle: 'Invoice App',
-    category: 'Full Stack Project / Frontend Mentor',
-    tech: 'MongooDB / Express / React / NodeJS / Redux / Styled Components',
-  },
-  {
-    id: 2,
-    src: 'https://images.unsplash.com/photo-1558603668-6570496b66f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1300&q=100',
-    title: 'Cereus Penuvianus',
-    subtitle: 'Live the Beauty',
-    category: 'Shooting / Adv.Campaing',
-    tech: 'MongooDB / Express / React / NodeJS / Redux / Styled Components',
-  },
-  {
-    id: 3,
-    src: 'https://images.unsplash.com/photo-1567225557594-88d73e55f2cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=934&q=100',
-    title: 'Calliope',
-    subtitle: 'Live the Beauty',
-    category: 'Shooting / Adv.Campaing',
-    tech: 'MongooDB / Express / React / NodeJS / Redux / Styled Components',
-  },
-];
-
 const HorProjects = () => {
   useEffect(() => {
     let sections = gsap.utils.toArray('.single-project-hor');
@@ -57,7 +31,7 @@ const HorProjects = () => {
 
   return (
     <Wrapper className='horizontal-container'>
-      {projects.map((project) => {
+      {projectsData.map((project) => {
         const { title, subtitle, category, src, id, tech } = project;
         return (
           <article key={id} className='single-project-hor'>
@@ -66,9 +40,12 @@ const HorProjects = () => {
               <div className='info'>
                 <h1 className='info-title'>{title}</h1>
                 <h2 className='info-subtitle'>{subtitle}</h2>
-                <p className='info-category'>{category}</p>
                 <p className='info-tech'>{tech}</p>
+                <p className='info-category'>{category}</p>
               </div>
+              <a href='#' className='project-link'>
+                learn more
+              </a>
               <div
                 className='image'
                 style={{ backgroundImage: `url(${src})` }}
@@ -89,6 +66,7 @@ const Wrapper = styled.div`
   height: 80vh;
   padding: 10vh 0;
   width: 300%;
+  position: relative;
 
   .single-project-hor {
     width: 100%;
@@ -108,7 +86,7 @@ const Wrapper = styled.div`
     bottom: 10%;
     z-index: 1;
     transform: translateX(-20%);
-    color: #dbd8d6;
+    color: var(--light-grey-color);
 
     &-title {
       font-size: 6vw;
@@ -123,7 +101,7 @@ const Wrapper = styled.div`
       color: transparent;
       font-family: var(--font-bodo);
       -webkit-font-smoothing: antialiased;
-      -webkit-text-stroke: 2px #dbd8d6;
+      -webkit-text-stroke: 2px var(--light-grey-color);
     }
 
     &-category,
@@ -135,10 +113,20 @@ const Wrapper = styled.div`
       margin-top: 2vh;
     }
 
-    &-tech {
+    &-category {
       margin-top: 10px;
-      color: var(--dark-color-1);
     }
+  }
+
+  .project-link {
+    position: absolute;
+    bottom: 10vh;
+    right: -40px;
+    transform: rotate(-90deg);
+    transform-origin: right bottom;
+    font-size: 24px;
+    color: var(--light-grey-color);
+    text-decoration: none;
   }
 
   .image {
