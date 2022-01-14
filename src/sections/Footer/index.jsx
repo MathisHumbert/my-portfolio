@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <div>footer</div>;
+  return <div style={{ padding: '100vh' }}>footer</div>;
 };
 
 export default Footer;
