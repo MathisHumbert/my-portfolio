@@ -18,7 +18,7 @@ import {
 } from 'react-icons/si';
 
 import images from '../assets';
-console.log(images);
+
 export const skillsHeaderData = [
   {
     id: 1,

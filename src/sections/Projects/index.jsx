@@ -4,9 +4,6 @@ import HorProjects from './HorProjects';
 import VerProjects from './VerProjects';
 
 const Projects = () => {
-  const [counter, setCounter] = useState(1);
-
-  const handleCounter = (id) => setCounter(id);
   return (
     <Wrapper>
       <HorProjects />

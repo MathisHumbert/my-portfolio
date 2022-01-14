@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const SingleSkill = ({ data, active, index }) => {
-  console.log(data);
   return (
     <Wrapper className={active === index ? 'show' : null}>
       {data.map((item) => {
