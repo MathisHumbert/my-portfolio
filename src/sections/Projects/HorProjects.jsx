@@ -59,7 +59,7 @@ const HorProjects = () => {
 };
 
 const Wrapper = styled.div`
-  background-color: #d53f41;
+  background-color: var(--dark-color-2);
   display: none;
   flex-wrap: nowrap;
   height: 80vh;
