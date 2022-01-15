@@ -157,8 +157,8 @@ export const projectsData = [
     subtitle: 'Product Feedback',
     category: 'Full Stack Project / Frontend Mentor',
     tech: 'JavaScirpt / Sass / HTML / NodeJS / Express / MongooDB',
-    code: 'https://github.com/MathisHumbert/mern-invoice-app',
-    website: '',
+    code: 'https://github.com/MathisHumbert/react-clone-skillex-website',
+    website: 'https://cloned-skillex-webiste.netlify.app/',
   },
   {
     id: 3,
@@ -167,7 +167,7 @@ export const projectsData = [
     subtitle: 'Skillex',
     category: 'Front End Project / cloned website from Dribbble',
     tech: 'React / Styled Components / GSAP',
-    code: 'https://github.com/MathisHumbert/mern-invoice-app',
+    code: 'https://github.com/MathisHumbert/product-feedback-full-stack-app',
     website: '',
   },
 ];
