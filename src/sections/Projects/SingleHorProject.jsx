@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import { FaLink, FaGithub } from 'react-icons/fa';
 import useOnScreen from '../../utils/useOnScreen';
 
 const SingleHorProject = ({
