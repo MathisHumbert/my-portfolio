@@ -19,3 +19,7 @@ const App = () => {
 };
 
 export default App;
+
+// ajouter un counter a hor
+// commencer ver style
+// faire le meme style de display que skirllex pour les skills

@@ -147,6 +147,8 @@ export const projectsData = [
     subtitle: 'Invoice App',
     category: 'Full Stack Project / Frontend Mentor',
     tech: 'React / Redux / Styled Components / NodeJS / Express / MongooDB',
+    code: 'https://github.com/MathisHumbert/mern-invoice-app',
+    website: '',
   },
   {
     id: 2,
@@ -155,6 +157,8 @@ export const projectsData = [
     subtitle: 'Product Feedback',
     category: 'Full Stack Project / Frontend Mentor',
     tech: 'JavaScirpt / Sass / HTML / NodeJS / Express / MongooDB',
+    code: 'https://github.com/MathisHumbert/mern-invoice-app',
+    website: '',
   },
   {
     id: 3,
@@ -163,5 +167,7 @@ export const projectsData = [
     subtitle: 'Skillex',
     category: 'Front End Project / cloned website from Dribbble',
     tech: 'React / Styled Components / GSAP',
+    code: 'https://github.com/MathisHumbert/mern-invoice-app',
+    website: '',
   },
 ];
