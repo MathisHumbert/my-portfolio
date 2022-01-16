@@ -44,10 +44,10 @@ const SingleHorProject = ({
           <a href='#' className='project-link'>
             learn more
           </a>
-          <a href={website}>
+          <a href={website} className='website-link'>
             Voir le résultat du projet <FaLink />
           </a>
-          <a href={code}>
+          <a href={code} className='code-link'>
             Voir le code du projet <FaGithub />
           </a>
         </div>
