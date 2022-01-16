@@ -11,6 +11,8 @@ const SingleHorProject = ({
   category,
   src,
   handleCounter,
+  code,
+  website,
 }) => {
   const ref = useRef(null);
 
@@ -41,6 +43,12 @@ const SingleHorProject = ({
         <div className='image' style={{ backgroundImage: `url(${src})` }}>
           <a href='#' className='project-link'>
             learn more
+          </a>
+          <a href={website}>
+            Voir le résultat du projet <FaLink />
+          </a>
+          <a href={code}>
+            Voir le code du projet <FaGithub />
           </a>
         </div>
       </div>
