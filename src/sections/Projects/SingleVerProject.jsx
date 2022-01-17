@@ -14,12 +14,14 @@ const SingleVerProject = ({
   return (
     <Wrapper key={id} className='single-project-ver'>
       <div></div>
-      <div className='info'>
-        <h1 className='info-title'>{title}</h1>
-        <h2 className='info-subtitle'>{subtitle}</h2>
-        <p className='info-category'>{category}</p>
+      <div className='project-item'>
+        <div className='info'>
+          <h1 className='info-title'>{title}</h1>
+          <h2 className='info-subtitle'>{subtitle}</h2>
+          <p className='info-category'>{category}</p>
+        </div>
+        <div className='image' style={{ backgroundImage: `url(${src})` }}></div>
       </div>
-      <div className='image' style={{ backgroundImage: `url(${src})` }}></div>
       <div></div>
     </Wrapper>
   );
@@ -30,8 +32,13 @@ const Wrapper = styled.article`
   min-height: 100vh;
   height: 100%;
   display: grid;
-  grid-template-rows: 100px 1fr 1vw;
+  grid-template-rows: 100px 1fr 20px;
   position: relative;
+
+  .project-item {
+    width: 100%;
+    height: 100%;
+  }
 
   .info {
     z-index: 1;
@@ -64,6 +71,7 @@ const Wrapper = styled.article`
   }
 
   .image {
+    height: 100%;
     background-size: cover;
     background-position: center;
     transform-origin: center;
