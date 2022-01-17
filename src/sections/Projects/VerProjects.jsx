@@ -13,8 +13,9 @@ const VerProjects = () => {
 };
 
 const Wrapper = styled.div`
-  background-color: #d53f41;
+  background-color: var(--dark-color-2);
   height: 100%;
-  width: 100%;
+  padding-left: 5vw;
+  padding-right: 5vw;
 `;
 export default VerProjects;

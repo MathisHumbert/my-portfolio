@@ -13,12 +13,14 @@ const SingleVerProject = ({
 }) => {
   return (
     <Wrapper key={id} className='single-project-ver'>
+      <div></div>
       <div className='info'>
         <h1 className='info-title'>{title}</h1>
         <h2 className='info-subtitle'>{subtitle}</h2>
         <p className='info-category'>{category}</p>
       </div>
       <div className='image' style={{ backgroundImage: `url(${src})` }}></div>
+      <div></div>
     </Wrapper>
   );
 };
@@ -26,19 +28,15 @@ const SingleVerProject = ({
 const Wrapper = styled.article`
   width: 100%;
   min-height: 100vh;
-
-  .project-item {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
+  height: 100%;
+  display: grid;
+  grid-template-rows: 100px 1fr 1vw;
+  position: relative;
 
   .info {
-    position: absolute;
-    bottom: 10%;
     z-index: 1;
-    transform: translateX(-20%);
     color: #dbd8d6;
+    position: absolute;
 
     &-title {
       font-size: 6vw;
@@ -66,12 +64,10 @@ const Wrapper = styled.article`
   }
 
   .image {
-    width: 100%;
-    height: 100%;
     background-size: cover;
     background-position: center;
     transform-origin: center;
-    z-index: 10;
+    border: 1px solid red;
   }
 
   @media (min-width: 768px) {
