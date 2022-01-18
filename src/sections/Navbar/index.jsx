@@ -16,14 +16,14 @@ const Navbar = () => {
       <h4>
         <span
           onClick={() => handleLanguage('fr')}
-          className={language === 'fr' ? 'active' : null}
+          className={language === 'fr' ? 'active lg' : 'lg'}
         >
           fr
         </span>
         <span> / </span>
         <span
           onClick={() => handleLanguage('en')}
-          className={language === 'en' ? 'active' : null}
+          className={language === 'en' ? 'active lg' : 'lg'}
         >
           en
         </span>
@@ -52,6 +52,20 @@ const Wrapper = styled.nav`
     font-size: 20px;
     color: var(--dark-color-4);
     text-decoration: none;
+  }
+
+  .lg {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .active {
+    opacity: 1;
   }
 
   @media (min-width: 1000px) {

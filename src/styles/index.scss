@@ -18,9 +18,13 @@
   --red-color: #d53f41;
 }
 
-// #root {
-//   padding: 0 5vw;
-// }
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  overflow-x: hidden;
+}
 
 body {
   background: #f5f0ec;
