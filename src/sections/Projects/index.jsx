@@ -7,7 +7,7 @@ import SectionHeader from '../../components/SectionHeader';
 const Projects = () => {
   return (
     <Wrapper>
-      <SectionHeader title='projets' marginLeft='5vw' />
+      <SectionHeader title='projets' marginLeft={true} />
       <HorProjects />
       <VerProjects />
     </Wrapper>

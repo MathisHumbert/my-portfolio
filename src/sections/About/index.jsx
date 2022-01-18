@@ -20,6 +20,7 @@ const Wrapper = styled.section`
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 5vw;
+  border: 1px solid red;
 
   h2 {
     font-size: 22px;
