@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { skillsData } from '../../utils/data';
+import { skillsHeaderData } from '../../utils/data';
 
 const Header = ({ activeSkill, setActiveSkill }) => {
   return (
     <Wrapper>
-      {skillsData.map((skill) => {
+      {skillsHeaderData.map((skill) => {
         return (
           <li
             key={skill.id}

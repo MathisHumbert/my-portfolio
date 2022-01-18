@@ -11,7 +11,7 @@ const Header = () => {
           <span>01 / </span>intro
         </li>
         <li>
-          <span>02 / </span>about
+          <span>02 / </span>à propos
         </li>
         <li>
           <span>03 / </span>projets

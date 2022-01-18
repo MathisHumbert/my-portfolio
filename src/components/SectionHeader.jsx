@@ -1,11 +1,11 @@
 const SectionHeader = ({ title, marginLeft }) => {
   return (
-    <h6
+    <h2
       className='section-header'
       style={marginLeft ? { marginLeft: '5vw' } : null}
     >
       {title}
-    </h6>
+    </h2>
   );
 };
 

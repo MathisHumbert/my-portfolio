@@ -15,9 +15,30 @@ import {
   SiWindowsterminal,
   SiNetlify,
   SiHeroku,
+  SiCodewars,
+  SiFrontendmentor,
+  SiTwitter,
+  SiLinkedin,
+  SiFreecodecamp,
+  SiGithub,
 } from 'react-icons/si';
 
 import images from '../assets';
+
+export const skillsHeaderData = [
+  {
+    id: 1,
+    title: 'front end',
+  },
+  {
+    id: 2,
+    title: 'back end',
+  },
+  {
+    id: 3,
+    title: 'global',
+  },
+];
 
 export const frontEndData = [
   {
@@ -25,42 +46,49 @@ export const frontEndData = [
     title: 'HTML',
     icon: <SiHtml5 />,
     color: '#f06529',
+    time: '12 months',
   },
   {
     id: 2,
     title: 'CSS',
     icon: <SiCss3 />,
     color: '#2965f1',
+    time: '12 months',
   },
   {
     id: 3,
     title: 'Sass',
     icon: <SiSass />,
     color: '#cc6699',
+    time: '10 months',
   },
   {
     id: 4,
     title: 'Javascript',
     icon: <SiJavascript />,
     color: '#f0db4f',
+    time: '10 months',
   },
   {
     id: 5,
     title: 'React',
     icon: <SiReact />,
     color: '#61dbfb',
+    time: '6 months',
   },
   {
     id: 6,
     title: 'Redux',
     icon: <SiRedux />,
     color: '#764abc',
+    time: '6 months',
   },
   {
     id: 7,
     title: 'Styled C.',
     icon: <SiStyledcomponents />,
     color: '#222',
+    time: '6 months',
   },
 ];
 
@@ -70,24 +98,28 @@ export const backEndData = [
     title: 'NodeJS',
     icon: <SiNodedotjs />,
     color: '#83ba63',
+    time: '8 months',
   },
   {
     id: 2,
     title: 'Express',
     icon: <SiExpress />,
     color: '#222',
+    time: '8 months',
   },
   {
     id: 3,
     title: 'MongoDB',
     icon: <SiMongodb />,
     color: '#3fa037',
+    time: '8 months',
   },
   {
     id: 4,
     title: 'Postman',
     icon: <SiPostman />,
     color: '#ef5b25',
+    time: '8 months',
   },
 ];
 
@@ -97,30 +129,35 @@ export const globalSkillsData = [
     title: 'VS Code',
     icon: <SiVisualstudiocode />,
     color: '#0078d7',
+    time: '12 months',
   },
   {
     id: 2,
     title: 'Git',
     icon: <SiGit />,
     color: '#f34f29',
+    time: '10 months',
   },
   {
     id: 3,
     title: 'Terminal',
     icon: <SiWindowsterminal />,
     color: '#222',
+    time: '10 months',
   },
   {
     id: 4,
     title: 'Netlify',
     icon: <SiNetlify />,
     color: '#20b2aa',
+    time: '10 months',
   },
   {
     id: 5,
     title: 'Heroku',
     icon: <SiHeroku />,
     color: '#6762A6',
+    time: '8 months',
   },
 ];
 
@@ -157,17 +194,35 @@ export const projectsData = [
   },
 ];
 
-export const skillsData = [
+export const footerData = [
   {
     id: 1,
-    title: 'front end',
+    logo: <SiTwitter />,
+    url: 'https://twitter.com/Mathis1Humbert',
   },
   {
     id: 2,
-    title: 'back end',
+    logo: <SiGithub />,
+    url: 'https://github.com/MathisHumbert',
   },
   {
     id: 3,
-    title: 'global',
+    logo: <SiLinkedin />,
+    url: 'https://www.linkedin.com/in/mathis-humbert-1612ba1b5/',
+  },
+  {
+    id: 4,
+    logo: <SiFrontendmentor />,
+    url: 'https://www.frontendmentor.io/profile/MathisHumbert',
+  },
+  {
+    id: 5,
+    logo: <SiFreecodecamp />,
+    url: 'https://www.freecodecamp.org/mathisse',
+  },
+  {
+    id: 6,
+    logo: <SiCodewars />,
+    url: 'https://www.codewars.com/users/MathisHumbert',
   },
 ];
