@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import SectionHeader from '../../components/SectionHeader';
-import SkillHeader from './SkillHeader';
+import Header from './Header';
+import Content from './Content';
 import { frontEndData, backEndData, globalSkillsData } from '../../utils/data';
 
 const Skills = () => {
@@ -10,55 +11,44 @@ const Skills = () => {
   return (
     <Wrapper className='section'>
       <header>
-        <SectionHeader title='skills' />
-        <SkillHeader
-          activeSkill={activeSkill}
-          setActiveSkill={setActiveSkill}
-        />
+        <SectionHeader title='compétences' />
+        <Header activeSkill={activeSkill} setActiveSkill={setActiveSkill} />
       </header>
       <div className='skills-container'>
-        {frontEndData.map((item) => {
-          const { id, title, icon, color } = item;
-          return (
-            <article key={id}>
-              <div className='logo'>
-                <span style={{ color: `${color}` }}>{icon}</span>
-              </div>
-              <h3>{title}</h3>
-              <p>6 months</p>
-            </article>
-          );
-        })}
+        <Content
+          data={
+            activeSkill === 1
+              ? frontEndData
+              : activeSkill === 2
+              ? backEndData
+              : globalSkillsData
+          }
+        />
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
-  border: 1px solid red;
-
   .skills-container {
-    margin-top: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px 0;
-  }
-
-  article {
-    border: 1px solid blue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .logo {
-    width: 130px;
-    height: 145px;
-    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     place-items: center;
-    font-size: 60px;
-    background-color: white;
+    width: 100%;
+    gap: 25px 50px;
+  }
+
+  @media (min-width: 1000px) {
+    .skills-container {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px 50px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .skills-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 `;
 export default Skills;

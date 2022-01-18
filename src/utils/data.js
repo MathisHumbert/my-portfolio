@@ -19,21 +19,6 @@ import {
 
 import images from '../assets';
 
-export const skillsHeaderData = [
-  {
-    id: 1,
-    title: 'front end',
-  },
-  {
-    id: 2,
-    title: 'back end',
-  },
-  {
-    id: 3,
-    title: 'global',
-  },
-];
-
 export const frontEndData = [
   {
     id: 1,

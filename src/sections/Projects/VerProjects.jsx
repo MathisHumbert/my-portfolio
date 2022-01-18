@@ -35,8 +35,10 @@ const Wrapper = styled.div`
   padding-right: 5vw;
 
   .project-counter {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
+    bottom: 100px;
     transform: translateX(-20px) rotate(90deg);
     transform-origin: left bottom;
     z-index: 10;
@@ -45,13 +47,13 @@ const Wrapper = styled.div`
     line-height: 16px;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
-    color: #dbd8d6;
+    color: #f5f0ec;
 
     .divider {
       content: '';
-      background-color: white;
+      background-color: #f5f0ec;
       width: 6.25vw;
-      margin: 7px 10px;
+      margin: 6px 10px;
       height: 1px;
       display: inline-block;
     }

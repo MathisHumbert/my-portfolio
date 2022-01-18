@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { skillsData } from '../../utils/data';
 
-const SkillHeader = ({ activeSkill, setActiveSkill }) => {
+const Header = ({ activeSkill, setActiveSkill }) => {
   return (
     <Wrapper>
       {skillsData.map((skill) => {
@@ -25,11 +25,12 @@ const Wrapper = styled.ul`
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-bottom: 25px;
 
   li {
     font-family: var(--font-bai);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--dark-color-4);
     text-transform: uppercase;
     margin-top: 24px;
@@ -58,5 +59,14 @@ const Wrapper = styled.ul`
       }
     }
   }
+
+  @media (min-width: 1000px) {
+    li {
+      font-size: 18px;
+    }
+
+    gap: 20px;
+    margin-bottom: 50px;
+  }
 `;
-export default SkillHeader;
+export default Header;

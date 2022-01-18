@@ -1,5 +1,5 @@
 import About from './sections/About';
-import Footer from './sections/Footer';
+import Contact from './sections/Contact';
 import Header from './sections/Header';
 import Projects from './sections/Projects';
 import Skills from './sections/Skills';
@@ -13,7 +13,7 @@ const App = () => {
       <About />
       <Projects />
       <Skills />
-      <Footer />
+      <Contact />
     </>
   );
 };

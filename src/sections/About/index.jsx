@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import img from '../../assets/mathis.png';
-import Skills from './Skills';
 
 const About = () => {
   return (
@@ -11,7 +10,6 @@ const About = () => {
       </div>
       <div className='right'>
         <h2>compétence</h2>
-        <Skills />
       </div>
     </Wrapper>
   );
