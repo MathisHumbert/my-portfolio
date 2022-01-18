@@ -26,7 +26,7 @@ const Footer = () => {
           navigator.clipboard.writeText('mathishumbert71@gmail.com');
         }}
       >
-        mathishumbert71 <br /> @gmail.com
+        mathishumbert71 @gmail.com
       </h1>
       {alert && <span>{t('copied')}</span>}
       <FooterInfo />
@@ -46,6 +46,7 @@ const Wrapper = styled.section`
     cursor: pointer;
     padding-bottom: 25px;
     text-transform: uppercase;
+    overflow: hidden;
   }
 
   span {

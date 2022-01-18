@@ -2,9 +2,18 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import img from '../../assets/mathis.png';
 import SectionHeader from '../../components/SectionHeader';
+import { slideImageTop, slideElemTop } from '../../utils/gsapActions';
+import { useEffect } from 'react';
+import SplitText from '../../utils/Split3.min';
 
 const About = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const split = new SplitText('#about-text', { type: 'lines' });
+    slideImageTop('#about-img', '#about');
+    slideElemTop(split.lines, '#about');
+  }, []);
 
   return (
     <Wrapper className='section' id='about'>
@@ -12,10 +21,10 @@ const About = () => {
       <div className='content'>
         <div className='left'>
           <h3>{t('me')}</h3>
-          <img src={img} alt='mathis-img' />
+          <img src={img} alt='mathis-img' id='about-img' />
         </div>
         <div className='right'>
-          <p>{t('about_text')}</p>
+          <p id='about-text'>{t('about_text')}</p>
         </div>
       </div>
     </Wrapper>

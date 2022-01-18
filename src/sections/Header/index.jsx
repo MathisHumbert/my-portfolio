@@ -1,6 +1,9 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { navData } from '../../utils/data';
+import { slideInTitle } from '../../utils/gsapActions';
+import SplitText from '../../utils/Split3.min';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -14,11 +17,24 @@ const Header = () => {
       top: position,
     });
   };
+
+  useEffect(() => {
+    const split = new SplitText('#header-title', {
+      type: 'lines',
+      linesClass: 'lineChildren',
+    });
+
+    new SplitText('#header-title', {
+      type: 'lines',
+      linesClass: 'lineParent',
+    });
+
+    slideInTitle(split.lines);
+  }, []);
+
   return (
     <Wrapper>
-      <h1>
-        {t('dev_top')} <br /> {t('dev_bottom')}
-      </h1>
+      <h1 id='header-title'>{t('dev')}</h1>
       <ul>
         {navData.map((item) => {
           const { id, title } = item;
@@ -106,6 +122,13 @@ const Wrapper = styled.header`
   .special-li {
     position: relative;
     opacity: 0;
+  }
+
+  .lineParent {
+    overflow: hidden;
+    .lineChildren {
+      transform: translate(0, 500px);
+    }
   }
 
   @media (min-width: 1000px) {

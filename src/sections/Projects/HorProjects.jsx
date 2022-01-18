@@ -1,24 +1,9 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { scrollHorizontal } from '../../utils/gsapActions';
 import { projectsData } from '../../utils/data';
 import SingleHorProject from './SingleHorProject';
-
-gsap.registerPlugin(ScrollTrigger);
-
-let scrollHorizontal = (elem, container) => {
-  gsap.to(elem, {
-    xPercent: -100 * (elem.length - 1),
-    ease: 'none',
-    scrollTrigger: {
-      trigger: container,
-      pin: true,
-      scrub: true,
-      end: () => `+=${container.offsetWidth}`,
-    },
-  });
-};
 
 const HorProjects = () => {
   const [counter, setCounter] = useState(1);

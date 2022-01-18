@@ -1,14 +1,20 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { slideElemTop } from '../../utils/gsapActions';
 
 const Content = ({ data }) => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    slideElemTop('#all-skills div', '#skills');
+  });
   return (
     <>
       {data.map((item) => {
         const { id, title, icon, color, time } = item;
         return (
-          <Wrapper key={id}>
+          <Wrapper key={id} id='all-skills'>
             <div className='container'>
               <div className='logo'>
                 <span style={{ color: `${color}` }}>{icon}</span>

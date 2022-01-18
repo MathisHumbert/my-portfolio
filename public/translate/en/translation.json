@@ -1,7 +1,6 @@
 {
   "welcome_to_react": "Welcome to React and react-i18next",
-  "dev_top": "front end",
-  "dev_bottom": "developer",
+  "dev": "front end developer",
   "intro": "intro",
   "about": "about",
   "projects": "projects",
