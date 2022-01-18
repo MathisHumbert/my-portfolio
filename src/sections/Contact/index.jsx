@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react/cjs/react.development';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import SectionHeader from '../../components/SectionHeader';
 import FooterInfo from './FooterInfo';
 
-const Footer = () => {
+const Contact = () => {
   const { t } = useTranslation();
   const [alert, setAlert] = useState(false);
 
@@ -71,4 +71,4 @@ const Wrapper = styled.section`
     }
   }
 `;
-export default Footer;
+export default Contact;
