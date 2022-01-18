@@ -1,9 +1,33 @@
+import { useState } from 'react';
 import styled from 'styled-components';
+import i18next from 'i18next';
 
-const index = () => {
+const Navbar = () => {
+  const localLanguage = localStorage.getItem('i18nextLng') || 'fr';
+  const [language, setLanguage] = useState(localLanguage);
+
+  const handleLanguage = (lg) => {
+    i18next.changeLanguage(lg);
+    setLanguage(lg);
+  };
+
   return (
-    <Wrapper>
-      <h4>fr / en</h4>
+    <Wrapper id='intro'>
+      <h4>
+        <span
+          onClick={() => handleLanguage('fr')}
+          className={language === 'fr' ? 'active' : null}
+        >
+          fr
+        </span>
+        <span> / </span>
+        <span
+          onClick={() => handleLanguage('en')}
+          className={language === 'en' ? 'active' : null}
+        >
+          en
+        </span>
+      </h4>
       <a
         href='https://twitter.com/Mathis1Humbert'
         target='_blank'
@@ -38,4 +62,4 @@ const Wrapper = styled.nav`
     }
   }
 `;
-export default index;
+export default Navbar;

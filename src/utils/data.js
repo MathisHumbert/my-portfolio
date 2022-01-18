@@ -25,6 +25,13 @@ import {
 
 import images from '../assets';
 
+export const navData = [
+  {
+    id: 1,
+    title: 'intro',
+  },
+];
+
 export const skillsHeaderData = [
   {
     id: 1,

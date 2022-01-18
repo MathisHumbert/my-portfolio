@@ -16,7 +16,7 @@ const Footer = () => {
   }, [alert]);
 
   return (
-    <Wrapper className='section'>
+    <Wrapper className='section' id='contact'>
       <SectionHeader title='contact' />
       <h1
         onClick={() => {

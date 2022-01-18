@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+  const { t } = useTranslation();
   return (
     <Wrapper>
       <h1>
-        développeur <br /> front end
+        {t('dev_top')} <br /> {t('dev_bottom')}
       </h1>
       <ul>
         <li>

@@ -9,7 +9,7 @@ const Skills = () => {
   const [activeSkill, setActiveSkill] = useState(1);
 
   return (
-    <Wrapper className='section'>
+    <Wrapper className='section' id='skills'>
       <header>
         <SectionHeader title='compétences' />
         <Header activeSkill={activeSkill} setActiveSkill={setActiveSkill} />

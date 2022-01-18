@@ -4,7 +4,7 @@ import SectionHeader from '../../components/SectionHeader';
 
 const About = () => {
   return (
-    <Wrapper className='section'>
+    <Wrapper className='section' id='about'>
       <SectionHeader title='à propos' />
       <div className='content'>
         <div className='left'>
