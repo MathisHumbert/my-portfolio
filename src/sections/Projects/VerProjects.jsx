@@ -5,17 +5,22 @@ import SingleVerProject from './SingleVerProject';
 
 const VerProjects = () => {
   const [counter, setCounter] = useState(1);
-
   const handleCounter = (id) => setCounter(id);
 
   return (
     <Wrapper className='vertical-container'>
+      <div className='project-counter'>
+        <span>0{counter}</span>
+        <span className='divider' />
+        <span>03</span>
+      </div>
       {projectsData.map((project) => {
         return (
           <SingleVerProject
             key={project.id}
             {...project}
             handleCounter={handleCounter}
+            counter={counter}
           />
         );
       })}
@@ -28,6 +33,29 @@ const Wrapper = styled.div`
   height: 100%;
   padding-left: 5vw;
   padding-right: 5vw;
+
+  .project-counter {
+    position: sticky;
+    top: 0;
+    transform: translateX(-20px) rotate(90deg);
+    transform-origin: left bottom;
+    z-index: 10;
+    mix-blend-mode: difference;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    color: #dbd8d6;
+
+    .divider {
+      content: '';
+      background-color: white;
+      width: 6.25vw;
+      margin: 7px 10px;
+      height: 1px;
+      display: inline-block;
+    }
+  }
 
   @media (min-width: 1000px) {
     display: none;

@@ -13,16 +13,17 @@ const SingleVerProject = ({
   handleCounter,
   code,
   website,
+  counter,
 }) => {
   const ref = useRef(null);
-
   const onScreen = useOnScreen(ref, 0.5);
 
   useEffect(() => {
     if (onScreen) {
       handleCounter(id);
     }
-  }, [onScreen, id]);
+    // eslint-disable-next-line
+  }, [onScreen, counter]);
 
   return (
     <Wrapper
