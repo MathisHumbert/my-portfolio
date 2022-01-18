@@ -42,7 +42,12 @@ const SingleVerProject = ({
         <div className='image-bcg'></div>
         <img src={src} alt={title} />
         <div className='link'>
-          <a href={website} className='website-link'>
+          <a
+            href={website}
+            className='website-link'
+            target='_blank'
+            rel='noreferrer'
+          >
             <FaLink className='link-icon' />
             lien du projet
           </a>
