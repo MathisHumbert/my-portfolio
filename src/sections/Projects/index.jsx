@@ -13,9 +13,8 @@ const Projects = () => {
 };
 
 const Wrapper = styled.section`
-  padding: 50px 0;
+  padding: 100px 0;
   width: 100%;
   height: 100%;
-  border: 1px solid blue;
 `;
 export default Projects;

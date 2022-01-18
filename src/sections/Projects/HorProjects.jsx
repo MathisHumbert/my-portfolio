@@ -7,16 +7,6 @@ import SingleHorProject from './SingleHorProject';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SingleProject = ({
-  id,
-  title,
-  subtitle,
-  tech,
-  category,
-  src,
-  handleCounter,
-}) => {};
-
 let scrollHorizontal = (elem, container) => {
   gsap.to(elem, {
     xPercent: -100 * (elem.length - 1),
