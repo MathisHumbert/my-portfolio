@@ -15,8 +15,6 @@ let scrollHorizontal = (elem, container) => {
       trigger: container,
       pin: true,
       scrub: true,
-      markers: true,
-
       end: () => `+=${container.offsetWidth}`,
     },
   });

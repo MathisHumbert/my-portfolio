@@ -17,7 +17,7 @@ const FooterInfo = () => {
         })}
       </ul>
       <div>
-        <h4>made by</h4>
+        <h4>créé par</h4>
         <h3>mathis humbert</h3>
       </div>
     </Wrapper>

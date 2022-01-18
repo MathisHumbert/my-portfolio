@@ -51,7 +51,7 @@ const SingleVerProject = ({
             <FaLink className='link-icon' />
             lien du projet
           </a>
-          <a href={code} className='code-link'>
+          <a href={code} className='code-link' target='_blank' rel='noreferrer'>
             <FaGithub className='link-icon' />
             lien du code
           </a>

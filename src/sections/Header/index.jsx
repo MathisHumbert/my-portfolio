@@ -31,7 +31,6 @@ const Wrapper = styled.header`
   position: relative;
   text-transform: uppercase;
   /* padding-bottom: 195px; */
-  min-height: calc(100vh - 70px);
   height: 100%;
   padding: 0 5vw;
 
@@ -62,8 +61,6 @@ const Wrapper = styled.header`
   }
 
   @media (min-width: 1000px) {
-    min-height: calc(100vh - 124px);
-
     li {
       font-size: 20px;
     }

@@ -4,7 +4,7 @@ const Content = ({ data }) => {
   return (
     <>
       {data.map((item) => {
-        const { id, title, icon, color } = item;
+        const { id, title, icon, color, time } = item;
         return (
           <Wrapper key={id}>
             <div className='container'>
@@ -12,7 +12,7 @@ const Content = ({ data }) => {
                 <span style={{ color: `${color}` }}>{icon}</span>
               </div>
               <h3>{title}</h3>
-              <p>6 months</p>
+              <p>{time}</p>
             </div>
           </Wrapper>
         );
