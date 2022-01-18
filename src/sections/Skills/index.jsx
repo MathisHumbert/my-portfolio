@@ -11,7 +11,7 @@ const Skills = () => {
   return (
     <Wrapper className='section' id='skills'>
       <header>
-        <SectionHeader title='compétences' />
+        <SectionHeader title='skills' />
         <Header activeSkill={activeSkill} setActiveSkill={setActiveSkill} />
       </header>
       <div className='skills-container'>

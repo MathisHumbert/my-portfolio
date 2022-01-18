@@ -1,24 +1,21 @@
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import img from '../../assets/mathis.png';
 import SectionHeader from '../../components/SectionHeader';
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper className='section' id='about'>
-      <SectionHeader title='à propos' />
+      <SectionHeader title='about' />
       <div className='content'>
         <div className='left'>
-          <h3>moi</h3>
+          <h3>{t('me')}</h3>
           <img src={img} alt='mathis-img' />
         </div>
         <div className='right'>
-          <p>
-            Le codage étant ma passion, l'apprendre était quelque chose que je
-            voulais faire. J'ai choisi de m'éduquer sur quelque chose qui
-            m'intéressait vraiment. Cela a été un déclencheur pour moi dans la
-            vie et c'est à ce moment-là que je suis tombé amoureux du codage,
-            mais surtout de l'apprentissage.
-          </p>
+          <p>{t('about_text')}</p>
         </div>
       </div>
     </Wrapper>

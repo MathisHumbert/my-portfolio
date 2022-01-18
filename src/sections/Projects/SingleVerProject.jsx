@@ -1,7 +1,8 @@
 import { useRef, useEffect } from 'react';
-import useOnScreen from '../../utils/useOnScreen';
 import styled from 'styled-components';
 import { FaLink, FaGithub } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+import useOnScreen from '../../utils/useOnScreen';
 
 const SingleVerProject = ({
   id,
@@ -15,6 +16,7 @@ const SingleVerProject = ({
   website,
   counter,
 }) => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const onScreen = useOnScreen(ref, 0.5);
 
@@ -49,11 +51,11 @@ const SingleVerProject = ({
             rel='noreferrer'
           >
             <FaLink className='link-icon' />
-            lien du projet
+            {t('website')}
           </a>
           <a href={code} className='code-link' target='_blank' rel='noreferrer'>
             <FaGithub className='link-icon' />
-            lien du code
+            {t('code')}
           </a>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const Content = ({ data }) => {
+  const { t } = useTranslation();
   return (
     <>
       {data.map((item) => {
@@ -12,7 +14,9 @@ const Content = ({ data }) => {
                 <span style={{ color: `${color}` }}>{icon}</span>
               </div>
               <h3>{title}</h3>
-              <p>{time}</p>
+              <p>
+                {time} {t('months')}
+              </p>
             </div>
           </Wrapper>
         );

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { navData } from '../../utils/data';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -9,21 +10,15 @@ const Header = () => {
         {t('dev_top')} <br /> {t('dev_bottom')}
       </h1>
       <ul>
-        <li>
-          <span>01 / </span>intro
-        </li>
-        <li>
-          <span>02 / </span>à propos
-        </li>
-        <li>
-          <span>03 / </span>projets
-        </li>
-        <li>
-          <span>04 / </span>compétences
-        </li>
-        <li>
-          <span>05 / </span>contact
-        </li>
+        {navData.map((item) => {
+          const { id, title } = item;
+          return (
+            <li key={id}>
+              <span>0{id} / </span>
+              {t(title)}
+            </li>
+          );
+        })}
       </ul>
     </Wrapper>
   );

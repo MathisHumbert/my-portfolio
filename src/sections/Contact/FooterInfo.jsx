@@ -1,7 +1,10 @@
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import { footerData } from '../../utils/data';
 
 const FooterInfo = () => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper>
       <ul>
@@ -17,7 +20,7 @@ const FooterInfo = () => {
         })}
       </ul>
       <div>
-        <h4>créé par</h4>
+        <h4>{t('created')}</h4>
         <h3>mathis humbert</h3>
       </div>
     </Wrapper>

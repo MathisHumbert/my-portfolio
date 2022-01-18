@@ -1,5 +1,17 @@
 {
   "welcome_to_react": "Bienvenue a React et react-i18next",
   "dev_top": "développeur",
-  "dev_bottom": "front end"
+  "dev_bottom": "front end",
+  "intro": "intro",
+  "about": "à propos",
+  "projects": "projets",
+  "skills": "compétences",
+  "contact": "contact",
+  "me": "moi",
+  "about_text": "Le codage étant ma passion, l'apprendre était quelque chose que je voulais faire. J'ai choisi de m'éduquer sur quelque chose qui m'intéressait vraiment. Cela a été un déclencheur pour moi dans la vie et c'est à ce moment-là que je suis tombé amoureux du codage,mais surtout de l'apprentissage.",
+  "website": "lien du projet",
+  "code": "lien du code",
+  "months": "mois",
+  "created": "créé par",
+  "copied": "copié"
 }

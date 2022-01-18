@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react/cjs/react.development';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import SectionHeader from '../../components/SectionHeader';
 import FooterInfo from './FooterInfo';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const [alert, setAlert] = useState(false);
 
   useEffect(() => {
@@ -21,12 +23,12 @@ const Footer = () => {
       <h1
         onClick={() => {
           setAlert(true);
-          navigator.clipboard.writeText('mathishumbert17@gmail.com');
+          navigator.clipboard.writeText('mathishumbert71@gmail.com');
         }}
       >
-        mathishumbert17 <br /> @gmail.com
+        mathishumbert71 <br /> @gmail.com
       </h1>
-      {alert && <span>copié</span>}
+      {alert && <span>{t('copied')}</span>}
       <FooterInfo />
     </Wrapper>
   );

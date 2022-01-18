@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { FaLink, FaGithub } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import useOnScreen from '../../utils/useOnScreen';
 
 const SingleHorProject = ({
@@ -15,6 +16,7 @@ const SingleHorProject = ({
   website,
   counter,
 }) => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const onScreen = useOnScreen(ref, 0.5);
 
@@ -47,7 +49,7 @@ const SingleHorProject = ({
             rel='noreferrer'
             className='website-link link'
           >
-            lien du projet <FaLink />
+            {t('website')} <FaLink />
           </a>
           <a
             href={code}
@@ -55,7 +57,7 @@ const SingleHorProject = ({
             rel='noreferrer'
             className='code-link link'
           >
-            lien du code <FaGithub />
+            {t('code')} <FaGithub />
           </a>
         </div>
       </div>

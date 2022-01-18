@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import HorProjects from './HorProjects';
 import VerProjects from './VerProjects';
@@ -7,7 +6,7 @@ import SectionHeader from '../../components/SectionHeader';
 const Projects = () => {
   return (
     <Wrapper id='project'>
-      <SectionHeader title='projets' marginLeft={true} />
+      <SectionHeader title='projects' marginLeft={true} />
       <HorProjects />
       <VerProjects />
     </Wrapper>
