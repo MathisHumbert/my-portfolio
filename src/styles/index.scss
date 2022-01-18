@@ -45,6 +45,40 @@ body {
   margin-bottom: 25px;
 }
 
+.absolute {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  z-index: 1;
+}
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 'all 0.3s ease';
+  background-color: var(--dark-color-2);
+  color: var(--grey-color);
+
+  h1 {
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    margin-top: 10px;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .section {
     padding: 100px 5vw;
@@ -53,5 +87,14 @@ body {
   .section-header {
     font-size: 22px;
     margin-bottom: 50px;
+  }
+
+  .loader-wrapper {
+    h1 {
+      font-size: 1.5vw;
+    }
+    h2 {
+      font-size: 1.5vw;
+    }
   }
 }

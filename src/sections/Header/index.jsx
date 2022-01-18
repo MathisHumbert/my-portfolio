@@ -23,21 +23,13 @@ const Header = () => {
         {navData.map((item) => {
           const { id, title } = item;
           return (
-            <div className={`link ${title}`}>
-              <li
-                key={id}
-                className='scroll-link '
-                onClick={() => handleScroll(title)}
-              >
+            <div className={`link ${title}`} key={id}>
+              <li className='scroll-link ' onClick={() => handleScroll(title)}>
                 <span>0{id} / </span>
                 {t(title)}
               </li>
 
-              <li
-                key={id}
-                className='scroll-link'
-                onClick={() => handleScroll(title)}
-              >
+              <li className='scroll-link' onClick={() => handleScroll(title)}>
                 <span>0{id} / </span>
                 {t(title)}
               </li>
