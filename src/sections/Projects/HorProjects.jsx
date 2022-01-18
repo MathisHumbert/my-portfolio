@@ -24,7 +24,6 @@ let scrollHorizontal = (elem, container) => {
 
 const HorProjects = () => {
   const [counter, setCounter] = useState(1);
-
   const handleCounter = (id) => setCounter(id);
 
   useEffect(() => {
@@ -35,12 +34,18 @@ const HorProjects = () => {
 
   return (
     <Wrapper className='horizontal-container'>
+      <div className='project-counter'>
+        <span>0{counter}</span>
+        <span className='divider' />
+        <span>03</span>
+      </div>
       {projectsData.map((project) => {
         return (
           <SingleHorProject
             key={project.id}
             {...project}
             handleCounter={handleCounter}
+            counter={counter}
           />
         );
       })}
@@ -57,7 +62,29 @@ const Wrapper = styled.div`
   width: 300%;
   position: relative;
 
-  @media (min-width: 768px) {
+  .project-counter {
+    position: absolute;
+    left: 100px;
+    top: 10%;
+    z-index: 10;
+    mix-blend-mode: difference;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    color: #dbd8d6;
+
+    .divider {
+      content: '';
+      background-color: white;
+      width: 6.25vw;
+      margin: 7px 10px;
+      height: 1px;
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: 1000px) {
     display: flex;
   }
 `;

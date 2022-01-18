@@ -28,5 +28,9 @@ const Wrapper = styled.div`
   height: 100%;
   padding-left: 5vw;
   padding-right: 5vw;
+
+  @media (min-width: 1000px) {
+    display: none;
+  }
 `;
 export default VerProjects;

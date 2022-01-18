@@ -147,7 +147,8 @@ const Wrapper = styled.article`
     height: 100%;
     z-index: -1;
     opacity: 0;
-    background: rgba(0, 0, 0, 0.5);
+    color: rgb(25, 25, 25);
+    background: rgba(25, 25, 25, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,10 +194,6 @@ const Wrapper = styled.article`
       transform: rotate(-90deg) scale(1);
       filter: none;
     }
-  }
-
-  @media (min-width: 768px) {
-    display: none;
   }
 `;
 export default SingleVerProject;

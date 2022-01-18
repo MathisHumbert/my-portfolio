@@ -13,20 +13,20 @@ const SingleHorProject = ({
   handleCounter,
   code,
   website,
+  counter,
 }) => {
   const ref = useRef(null);
-
   const onScreen = useOnScreen(ref, 0.5);
 
   useEffect(() => {
-    console.log(onScreen);
     if (onScreen) {
       handleCounter(id);
     }
-  }, [onScreen, id]);
+    // eslint-disable-next-line
+  }, [onScreen, counter]);
+
   return (
     <Wrapper
-      key={id}
       className={
         onScreen ? 'single-project-hor is-reveal' : 'single-project-hor'
       }
@@ -41,14 +41,21 @@ const SingleHorProject = ({
           <p className='info-category'>{category}</p>
         </div>
         <div className='image' style={{ backgroundImage: `url(${src})` }}>
-          <a href='#' className='project-link'>
-            learn more
+          <a
+            href={website}
+            target='_blank'
+            rel='noreferrer'
+            className='website-link link'
+          >
+            lien du projet <FaLink />
           </a>
-          <a href={website} className='website-link'>
-            Voir le résultat du projet <FaLink />
-          </a>
-          <a href={code} className='code-link'>
-            Voir le code du projet <FaGithub />
+          <a
+            href={code}
+            target='_blank'
+            rel='noreferrer'
+            className='code-link link'
+          >
+            lien du code <FaGithub />
           </a>
         </div>
       </div>
@@ -74,7 +81,7 @@ const Wrapper = styled.article`
     bottom: 10%;
     z-index: 1;
     transform: translateX(-20%);
-    color: var(--light-grey-color);
+    color: var(--grey-color);
 
     &-title {
       font-size: 6vw;
@@ -89,7 +96,7 @@ const Wrapper = styled.article`
       color: transparent;
       font-family: var(--font-bodo);
       -webkit-font-smoothing: antialiased;
-      -webkit-text-stroke: 2px var(--light-grey-color);
+      -webkit-text-stroke: 2px var(--grey-color);
     }
 
     &-category,
@@ -114,6 +121,7 @@ const Wrapper = styled.article`
   }
 
   .image {
+    aspect-ratio: 16 / 9;
     position: relative;
     width: 100%;
     height: 100%;
@@ -131,23 +139,44 @@ const Wrapper = styled.article`
       filter: none;
     }
 
-    .project-link {
-      transform: rotate(-90deg) scale(1);
+    .link {
       filter: none;
+    }
+
+    .website-link {
+      transform: rotate(-90deg) scale(1);
     }
   }
 
-  .project-link {
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     position: absolute;
-    bottom: 10vh;
-    right: -40px;
-    transform: rotate(-90deg) scale(0.7);
-    transform-origin: right bottom;
     font-size: 24px;
-    color: var(--light-grey-color);
+    color: var(--grey-color);
     text-decoration: none;
-    transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: filter 1.5s cubic-bezier(0.77, 0, 0.175, 1),
+      transform 1.5s cubic-bezier(0.77, 0, 0.175, 1), color 0.4s ease;
     filter: grayscale(100%) sepia(20%) brightness(80%);
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .website-link {
+    bottom: 0;
+    right: -234px;
+    transform: rotate(-90deg) scale(0.7);
+    transform-origin: left bottom;
+  }
+
+  .code-link {
+    top: 0;
+    right: -225px;
+    transform: rotate(90deg);
+    transform-origin: left top;
   }
 `;
 export default SingleHorProject;
