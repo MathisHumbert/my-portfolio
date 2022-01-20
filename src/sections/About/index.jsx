@@ -2,17 +2,15 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import img from '../../assets/mathis.png';
 import SectionHeader from '../../components/SectionHeader';
-import { slideImageTop, slideElemTop } from '../../utils/gsapActions';
+import { slideImageTop, slideTextTop } from '../../utils/gsapActions';
 import { useEffect } from 'react';
-import SplitText from '../../utils/Split3.min';
 
 const About = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const split = new SplitText('#about-text', { type: 'lines' });
     slideImageTop('#about-img', '#about');
-    slideElemTop(split.lines, '#about');
+    slideTextTop('#about-text', '#about');
   }, []);
 
   return (
@@ -58,7 +56,7 @@ const Wrapper = styled.section`
 
   p {
     font-size: 24px;
-    line-height: 1.2;
+    line-height: 1.4;
   }
 
   @media (min-width: 1000px) {

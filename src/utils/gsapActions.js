@@ -64,3 +64,24 @@ export const slideElemTop = (elem, trig) => {
     }
   );
 };
+
+export const slideTextTop = (elem, trig) => {
+  gsap.fromTo(
+    elem,
+    {
+      opacity: 0,
+      y: '200%',
+    },
+    {
+      duration: 1,
+      opacity: 1,
+      y: 0,
+      delai: 0.4,
+      scrollTrigger: {
+        trigger: trig,
+        start: 'top center',
+        end: 'bottom center',
+      },
+    }
+  );
+};
