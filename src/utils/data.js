@@ -163,20 +163,13 @@ export const globalSkillsData = [
   },
   {
     id: 3,
-    title: 'Terminal',
-    icon: <SiWindowsterminal />,
-    color: '#222',
-    time: '10',
-  },
-  {
-    id: 4,
     title: 'Netlify',
     icon: <SiNetlify />,
     color: '#20b2aa',
     time: '10',
   },
   {
-    id: 5,
+    id: 4,
     title: 'Heroku',
     icon: <SiHeroku />,
     color: '#6762A6',
