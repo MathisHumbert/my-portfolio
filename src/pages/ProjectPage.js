@@ -17,7 +17,7 @@ const ProjectPage = () => {
   console.log(tempData);
 
   return (
-    <Wrapper>
+    <Wrapper className='section'>
       <BackHome />
       <Header {...tempData} />
       <img src={tempData.img} alt='' />
@@ -28,24 +28,8 @@ const ProjectPage = () => {
 };
 
 const Wrapper = styled.div`
-  .link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--light-grey-color);
-    text-decoration: none;
-    font-size: 4vw;
-    line-height: 4vw;
-    font-family: var(--font-bai);
-    font-weight: 400px;
-    transition: color 0.4s ease;
-
-    &:hover {
-      color: white;
-    }
-  }
-
   img {
+    padding: 25px 0;
     width: 100%;
   }
 `;

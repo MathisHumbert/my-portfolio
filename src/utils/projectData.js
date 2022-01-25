@@ -9,7 +9,15 @@ const data = [
     code: 'https://github.com/MathisHumbert/mern-invoice-app',
     website: 'https://mern-invoice-app.herokuapp.com/',
     header: 'header_text1',
-    tech: 'React / Redux / Styled Components / NodeJS / Express / MongooDB',
+    tech: [
+      'React',
+      'Redux',
+      'Styled Components',
+      'NodeJS',
+      'Express',
+      'MongoDB',
+    ],
+
     challenges: ['ch1', 'ch2', 'ch3', 'ch4', 'ch5'],
     success: ['su1', 'su2', 'su3', 'su4', 'su5'],
     codeExamples: [
