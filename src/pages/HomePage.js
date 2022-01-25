@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
-import About from '../sections/About';
-import Contact from '../sections/Contact';
-import Header from '../sections/Header';
-import Projects from '../sections/Projects';
-import Skills from '../sections/Skills';
-import Navbar from '../sections/Navbar';
+import About from '../HomeSections/About';
+import Contact from '../HomeSections/Contact';
+import Header from '../HomeSections/Header';
+import Projects from '../HomeSections/Projects';
+import Skills from '../HomeSections/Skills';
+import Navbar from '../HomeSections/Navbar';
 
 const HomePage = () => {
   const [preloader, setPreload] = useState(true);
