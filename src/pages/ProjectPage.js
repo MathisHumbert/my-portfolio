@@ -1,36 +1,64 @@
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { FaLink, FaGithub } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
+import data from '../utils/projectData';
 
 const ProjectPage = () => {
+  const { t } = useTranslation();
   const { id } = useParams();
-  console.log(id);
+
+  const tempData = data[0];
+  console.log(tempData);
+  const { title, website, code, img, header } = tempData;
 
   return (
     <Wrapper>
-      <h1>Under Construction</h1>
-      <Link to='/'>back home</Link>
+      <header>
+        <h1>{title}</h1>
+        <a
+          href={website}
+          target='_blank'
+          rel='noreferrer'
+          className='website-link link'
+        >
+          {t('website')} <FaLink />
+        </a>
+        <a
+          href={code}
+          target='_blank'
+          rel='noreferrer'
+          className='code-link link'
+        >
+          {t('code')} <FaGithub />
+        </a>
+      </header>
+      <img src={img} alt='' />
+      <section></section>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  h1,
-  a {
-    color: var(--dark-color-2);
-    text-align: center;
-    font-size: 4vw;
-    margin-top: 2rem;
-    font-weight: 600;
-  }
-
-  a {
-    display: block;
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--light-grey-color);
     text-decoration: none;
+    font-size: 4vw;
+    line-height: 4vw;
+    font-family: var(--font-bai);
+    font-weight: 400px;
+    transition: color 0.4s ease;
 
     &:hover {
-      text-decoration: underline;
+      color: white;
     }
+  }
+
+  img {
+    width: 100%;
   }
 `;
 export default ProjectPage;
