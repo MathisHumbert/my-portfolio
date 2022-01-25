@@ -187,7 +187,7 @@ const Wrapper = styled.article`
     line-height: 4vw;
     font-family: var(--font-bai);
     font-weight: 400px;
-    transition: color 0.4 ease;
+    transition: color 0.4s ease;
 
     &:hover {
       color: white;
@@ -220,7 +220,7 @@ const Wrapper = styled.article`
     font-family: var(--font-bai);
     font-weight: 400px;
     padding-top: 10px;
-    transition: color 0.4 ease;
+    transition: color 0.4s ease;
 
     &:hover {
       color: var(--light-grey-color);

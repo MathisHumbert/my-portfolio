@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { FaLink, FaGithub } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import useOnScreen from '../../utils/useOnScreen';
 
 const SingleHorProject = ({
@@ -41,6 +42,9 @@ const SingleHorProject = ({
           <h2 className='info-subtitle'>{subtitle}</h2>
           <p className='info-tech'>{tech}</p>
           <p className='info-category'>{category}</p>
+          <Link to={`/project/${id}`} className='learn-more'>
+            {t('learn_more')}
+          </Link>
         </div>
         <div className='image' style={{ backgroundImage: `url(${src})` }}>
           <a
@@ -179,6 +183,25 @@ const Wrapper = styled.article`
     right: -225px;
     transform: rotate(90deg);
     transform-origin: left top;
+  }
+
+  .learn-more {
+    display: block;
+    width: fit-content;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: var(--grey-color);
+    text-decoration: none;
+    font-size: 3vw;
+    line-height: 3vw;
+    font-family: var(--font-bai);
+    font-weight: 400px;
+    padding-top: 10px;
+    transition: color 0.4s ease;
+
+    &:hover {
+      color: var(--light-grey-color);
+    }
   }
 `;
 export default SingleHorProject;
