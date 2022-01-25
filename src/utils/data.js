@@ -12,7 +12,6 @@ import {
   SiNodedotjs,
   SiVisualstudiocode,
   SiGit,
-  SiWindowsterminal,
   SiNetlify,
   SiHeroku,
   SiCodewars,

@@ -66,7 +66,7 @@ const Wrapper = styled.section`
     }
 
     p {
-      font-size: 48px;
+      font-size: 32px;
     }
 
     h3 {
@@ -75,6 +75,11 @@ const Wrapper = styled.section`
       font-weight: 600;
       letter-spacing: 1px;
       font-family: 'Syncopate', sans-serif;
+    }
+  }
+  @media (min-width: 1440px) {
+    p {
+      font-size: 48px;
     }
   }
 `;
