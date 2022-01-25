@@ -1,39 +1,27 @@
 import { useParams } from 'react-router-dom';
-import { FaLink, FaGithub } from 'react-icons/fa';
-import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import data from '../utils/projectData';
+import Header from '../ProjectSections/Header';
+import Content from '../ProjectSections/Content';
+import BackHome from '../ProjectSections/BackHome';
+
+// back home
+// projet number 1
+// header
+// img
+// content
 
 const ProjectPage = () => {
-  const { t } = useTranslation();
   const { id } = useParams();
-
   const tempData = data[0];
   console.log(tempData);
-  const { title, website, code, img, header } = tempData;
 
   return (
     <Wrapper>
-      <header>
-        <h1>{title}</h1>
-        <a
-          href={website}
-          target='_blank'
-          rel='noreferrer'
-          className='website-link link'
-        >
-          {t('website')} <FaLink />
-        </a>
-        <a
-          href={code}
-          target='_blank'
-          rel='noreferrer'
-          className='code-link link'
-        >
-          {t('code')} <FaGithub />
-        </a>
-      </header>
-      <img src={img} alt='' />
+      <BackHome />
+      <Header {...tempData} />
+      <img src={tempData.img} alt='' />
+      <Content {...tempData} />
       <section></section>
     </Wrapper>
   );
