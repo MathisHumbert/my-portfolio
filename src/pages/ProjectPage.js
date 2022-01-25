@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import data from '../utils/projectData';
 
 const ProjectPage = () => {
   const { id } = useParams();
