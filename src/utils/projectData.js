@@ -18,8 +18,17 @@ const data = [
       'MongoDB',
     ],
 
-    challenges: ['ch1', 'ch2', 'ch3', 'ch4', 'ch5'],
-    success: ['su1', 'su2', 'su3', 'su4', 'su5'],
+    challenges: ['p1_ch1', 'p1_ch2', 'p1_ch3', 'p1_ch4', 'p1_ch5'],
+    success: [
+      'p1_su1',
+      'p1_su2',
+      'p1_su3',
+      'p1_su4',
+      'p1_su5',
+      'p1_su6',
+      'p1_su7',
+      'p1_su8',
+    ],
     codeExamples: [
       images.code1,
       images.code2,

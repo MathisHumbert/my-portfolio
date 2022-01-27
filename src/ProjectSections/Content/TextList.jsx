@@ -1,13 +1,18 @@
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
-const TextList = ({ text }) => {
+const TextList = ({ text, code }) => {
   const { t } = useTranslation();
 
   return (
     <Wrapper>
       {text.map((item, index) => {
-        return <li key={index}>{t(item)}</li>;
+        return (
+          <div>
+            <li key={index}>{t(item)}</li>
+            {code && <img src={code[index]} alt={`code${index}`} />}
+          </div>
+        );
       })}
     </Wrapper>
   );

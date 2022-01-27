@@ -19,5 +19,10 @@
   "learning": "apprentissage",
   "header_text1": "Ce projet me vient du site Frontend Mentor. Le but est de créer un site qui gère les factures d’achat des utilisateurs. J’ai donc décidé de coder moi-même ce projet en utilisant React pour le front end et NodeJS pour le back end.",
   "header_text2": "Ce projet me vient de Benjamin Code qui a lancé un challenge, reproduire une partie de la landing page en 1 heure. J’ai décidé de réaliser ce défi, cela m’a pris 2 heures afin d’obtenir un résultat qui me convenait. Ensuite les autres parties de la page m’intéressaient, j’ai donc décidé de cloner la page entière. Le site original que j’ai recréé est Skillex que j'ai trouvé sur Dribble.",
-  "header_text3": "Ce projet me vient du site Frontend Mentor. Le but est de créer un site qui gère les commentaires des utilisateurs. J’ai donc décidé de coder moi-même ce projet en utilisant JavaScript pour le front end et NodeJS pour le back end."
+  "header_text3": "Ce projet me vient du site Frontend Mentor. Le but est de créer un site qui gère les commentaires des utilisateurs. J’ai donc décidé de coder moi-même ce projet en utilisant JavaScript pour le front end et NodeJS pour le back end.",
+  "p1_ch1": "Connecter le front et le back en utilisant React.",
+  "p1_ch2": "Créer une authentification en back end et la gérer en front.",
+  "p1_ch3": "Créer des routes privées en front end pour que les utilisateurs non identifiés n’aient pas accès aux pages des factures d’achat.",
+  "p1_ch4": "Gérer un formulaire avec de nombreuses informations. Réussir à le stocker, l’envoyer à un serveur et en recevoir un.",
+  "p1_ch5": "Créer un CRUD pour les factures d’achat spécifiques à l’utilisateur."
 }
