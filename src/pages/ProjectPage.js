@@ -13,7 +13,7 @@ import BackHome from '../ProjectSections/BackHome';
 
 const ProjectPage = () => {
   const { id } = useParams();
-  const tempData = data[3];
+  const tempData = data[2];
   console.log(tempData);
 
   return (
@@ -28,6 +28,8 @@ const ProjectPage = () => {
 };
 
 const Wrapper = styled.div`
+  max-width: 700px;
+  margin: 0 auto;
   img {
     padding: 25px 0;
     width: 100%;

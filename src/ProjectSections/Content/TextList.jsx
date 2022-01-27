@@ -27,9 +27,16 @@ const Wrapper = styled.ul`
 
   li {
     list-style-type: disc;
-    margin-left: 5vw;
+    margin-left: 28px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: 1000px) {
+    li {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 `;
 export default TextList;

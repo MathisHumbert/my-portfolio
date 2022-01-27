@@ -58,5 +58,16 @@ const Wrapper = styled.header`
   .website-link {
     margin-bottom: 8px;
   }
+
+  @media (min-width: 1000px) {
+    h1 {
+      font-size: 60px;
+    }
+
+    .link {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
 `;
 export default Header;

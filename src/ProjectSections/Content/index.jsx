@@ -48,5 +48,12 @@ const Wrapper = styled.section`
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media (min-width: 1000px) {
+    p {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
 `;
 export default Content;
