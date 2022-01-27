@@ -13,7 +13,7 @@ import BackHome from '../ProjectSections/BackHome';
 
 const ProjectPage = () => {
   const { id } = useParams();
-  const tempData = data[1];
+  const tempData = data[3];
   console.log(tempData);
 
   return (
