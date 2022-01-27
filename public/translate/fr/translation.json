@@ -24,5 +24,15 @@
   "p1_ch2": "Créer une authentification en back end et la gérer en front.",
   "p1_ch3": "Créer des routes privées en front end pour que les utilisateurs non identifiés n’aient pas accès aux pages des factures d’achat.",
   "p1_ch4": "Gérer un formulaire avec de nombreuses informations. Réussir à le stocker, l’envoyer à un serveur et en recevoir un.",
-  "p1_ch5": "Créer un CRUD pour les factures d’achat spécifiques à l’utilisateur."
+  "p1_ch5": "Créer un CRUD pour les factures d’achat spécifiques à l’utilisateur.",
+  "p2_ch1": "Créer l’effet de hover entre les 3 différentes images.",
+  "p2_ch2": "Créer les différentes animations lors du scroll et reveal.",
+  "p2_ch3": "Recréer au mieux le projet.",
+  "p2_ch4": "Créer un smooth scroll entre les différentes sections de la page grâce aux différents liens.",
+  "p3_ch1": "Gérer la création d’un commentaire d’utilisateur.",
+  "p3_ch2": "Gérer la réception de tous les commentaires.",
+  "p3_ch3": "Gérer la modification d’un commentaire.",
+  "p3_ch4": "Gérer la suppression d’un commentaire.",
+  "p3_ch5": "Réussir à filtrer les commentaires.",
+  "p3_ch6": "Réussir à avoir un seul commentaire."
 }

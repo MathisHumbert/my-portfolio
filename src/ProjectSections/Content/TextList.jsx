@@ -21,7 +21,7 @@ const TextList = ({ text, code }) => {
 const Wrapper = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 
   li {
     list-style-type: disc;
