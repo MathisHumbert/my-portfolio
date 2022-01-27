@@ -34,5 +34,27 @@
   "p3_ch3": "Gérer la modification d’un commentaire.",
   "p3_ch4": "Gérer la suppression d’un commentaire.",
   "p3_ch5": "Réussir à filtrer les commentaires.",
-  "p3_ch6": "Réussir à avoir un seul commentaire."
+  "p3_ch6": "Réussir à avoir un seul commentaire.",
+  "p1_su1": "La connexion front et back a été simple, j’ai suivi un cours udemy MERN qui m’a grandement aidé. En utilisant le proxy et en lançant le serveur et le front j’ai pu connecter les deux.",
+  "p1_su2": "L’authentification en back j’ai utilisé jsonwebtoken et bcrypt.js pour authentifier un utilisateur (login, register, logout). En front lorsque l’utilisateur s’enregistrait ou créait un compte je stockais son token et son nom dans le reducer et dans le LocalStorage. Ainsi je pouvais le récupérer lorsqu’il désirait accéder à différentes méthodes CRUD.",
+  "p1_su3": "Créer des routes privées a été un défi au début. Ensuite, grâce au cours Udemy, j’ai appris à utiliser correctement react-router-dom pour mettre en place des routes privées.",
+  "p1_su4": "Gérer le formulaire a été chronophage. Grâce à Redux, j’ai pu gérer la création, l’envoi et la modification de chaque input du formulaire.",
+  "p1_su5": "Pour la création d’un formulaire, j’ai utilisé la méthode POST",
+  "p1_su6": "Pour la réception des formulaires, j’ai utilisé la méthode GET.",
+  "p1_su7": "Pour la modification d’un formulaire, j’ai utilisé la méthode PATCH.",
+  "p1_su8": "Pour la suppression d’un formulaire, j’ai utilisé la méthode DELETE.",
+  "p2_su1": "Afin de réaliser l’effet de hover entre les 3 différentes images j’ai tout simplement utiliser flex. Les 3 images sont flex entre elles et l’image qui est hover reçoit un flex plus important que les deux autres.",
+  "p2_su2": "Pour créer les différentes animations lors du scroll j’ai utilisé le package gsap qui facilite grandement les effets d’animation.",
+  "p2_su3": "Pour réaliser le scroll entre les différentes sections, j’ai utilisé le Context API de React. J’ai créé cette fonction que j’ai utilisée sur mes liens grace à OnClick.",
+  "p2_su4": "Pour recréer le projet, j’ai utilisé l’outil Inspecteur de mon navigateur.",
+
+  "p3_su1": "Pour la création d’un commentaire, j’ai utilisé la méthode POST.",
+  "p3_su2": "Pour la réception de tous les commentaires, j’ai utilisé la méthode GET.",
+  "p3_su3": "Pour la modification d’un commentaire, j’ai utilisé la méthode PATCH.",
+  "p3_su4": "Pour la suppression d’un commentaire, j’ai utilisé la méthode DELETE.",
+  "p3_su5": "Pour filter les commentaires, j’ai décidé d’utiliser le back plutôt que le front pour des soucis de clarté et de légèreté.",
+  "p3_su6": "Pour réussir à afficher un seul commentaire, j’ai utilisé son id que je passe dans l’url et que je récupère ensuite.",
+  "learn-1": "Lors de la création de ce projet, j’ai appris à créer une application MERN, en combinant mes connaissances front end (React) et back end (NodeJS, Express, MongoDB). Je sais maintenant authentifier un utilisateur et créer des routes privées. Grâce à ce projet, j’ai solidifié mes connaissances en React et en NodeJS.",
+  "learn-2": "Lors de la création de ce projet, j’ai appris à recréer une landing page et à la rendre plus responsive. Je sais maintenant utiliser gsap pour créer des animations on reveal et on scroll. Grâce à ce projet, j’ai solidifié mes connaissances en React, Styled Components et appris à utiliser gsap.",
+  "learn-3": "Lors de la création de ce projet, j’ai appris à créer une application full stack, en combinant mes connaissances front end (Javascript) et back end (NodeJS, Express, MongoDB). Je sais maintenant connecter ma page (front end) avec mon serveur (back end). Grâce à ce projet, j’ai solidifié mes connaissances en JavaScript et en NodeJS."
 }

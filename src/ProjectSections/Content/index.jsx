@@ -3,7 +3,14 @@ import { useTranslation } from 'react-i18next';
 import TextList from './TextList';
 import ArticleHeader from '../../components/ArticleHeader';
 
-const Content = ({ header, tech, challenges, codeExamples, learn }) => {
+const Content = ({
+  header,
+  tech,
+  challenges,
+  success,
+  codeExamples,
+  learn,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -21,7 +28,7 @@ const Content = ({ header, tech, challenges, codeExamples, learn }) => {
       </article>
       <article>
         <ArticleHeader title='suc' />
-        <TextList text={challenges} code={codeExamples} />
+        <TextList text={success} code={codeExamples} />
       </article>
       <article>
         <ArticleHeader title='learning' />
@@ -36,5 +43,10 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  p {
+    font-size: 16px;
+    line-height: 20px;
+  }
 `;
 export default Content;

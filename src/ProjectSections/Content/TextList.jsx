@@ -10,7 +10,9 @@ const TextList = ({ text, code }) => {
         return (
           <div>
             <li key={index}>{t(item)}</li>
-            {code && <img src={code[index]} alt={`code${index}`} />}
+            {code && code[index] && (
+              <img src={code[index]} alt={`code${index}`} />
+            )}
           </div>
         );
       })}
@@ -26,6 +28,8 @@ const Wrapper = styled.ul`
   li {
     list-style-type: disc;
     margin-left: 5vw;
+    font-size: 16px;
+    line-height: 20px;
   }
 `;
 export default TextList;

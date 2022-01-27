@@ -7,6 +7,9 @@ const images = {
   code6: require('./code-6.png'),
   code7: require('./code-7.png'),
   code8: require('./code-8.png'),
+  code9: require('./code-9.png'),
+  code10: require('./code-10.png'),
+  code11: require('./code-11.png'),
 };
 
 export default images;
