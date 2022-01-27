@@ -8,8 +8,8 @@ const TextList = ({ text, code }) => {
     <Wrapper>
       {text.map((item, index) => {
         return (
-          <div>
-            <li key={index}>{t(item)}</li>
+          <div key={index}>
+            <li>{t(item)}</li>
             {code && code[index] && (
               <img src={code[index]} alt={`code${index}`} />
             )}

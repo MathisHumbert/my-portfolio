@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { BiChevronLeft } from 'react-icons/bi';
 import styled from 'styled-components';
 
 const BackHome = () => {
+  const { t } = useTranslation();
+
   return (
     <Wrapper>
       <Link to='/'>
-        {' '}
-        <BiChevronLeft className='icon' /> back home
+        <BiChevronLeft className='icon' /> {t('back')}
       </Link>
     </Wrapper>
   );
