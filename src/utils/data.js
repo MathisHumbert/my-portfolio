@@ -20,6 +20,7 @@ import {
   SiLinkedin,
   SiFreecodecamp,
   SiGithub,
+  SiTestinglibrary,
 } from 'react-icons/si';
 
 import images from '../assets';
@@ -111,6 +112,13 @@ export const frontEndData = [
     icon: <SiStyledcomponents />,
     color: '#222',
     time: '6',
+  },
+  {
+    id: 8,
+    title: 'React Testing',
+    icon: <SiTestinglibrary />,
+    color: '#e33332',
+    time: '3',
   },
 ];
 
