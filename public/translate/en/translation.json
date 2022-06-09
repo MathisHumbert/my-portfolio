@@ -7,7 +7,7 @@
   "skills": "skills",
   "contact": "contact",
   "me": "me",
-  "about_text": "I am a 23 years old developer who has been training for more than a year in front end development. Today, I have a solid knowledge thanks to the different apprenticeships available on FreeCodeCamp and Udemy, I was able to learn various languages such as JavaScript and React. I also have some back end basics with NodeJS and MongoDB. Today programming being one of my passions, learning it was something I wanted to do. I chose to train on something that really interested me. This was a trigger for me in life and that's when I fell in love with development, but especially learning.",
+  "about_text": "I am a 23 years old self-taught front end developer. I trained for one year in front end development. I acquired solid knowledge thanks to the different apprenticeships available on FreeCodeCamp and Udemy. I was able to learn various languages such as JavaScript and HTML/CSS, but also their frameworks such as React, React Native, Next.js and Sass.",
   "website": "project's link",
   "code": "code's link",
   "months": "months",
@@ -56,5 +56,7 @@
   "p3_su6": "To succeed in displaying only one comment, I used its id which I pass in the url and which I recover then.",
   "learn-1": "During the creation of this project, I learned to create a MERN application, combining my front end (React) and back end (NodeJS, Express, MongoDB) knowledge. I now know how to authenticate a user and create private routes. Thanks to this project, I solidified my knowledge in React and NodeJS.",
   "learn-2": "While creating this project, I learned how to recreate a landing page and make it more responsive. I now know how to use gsap to create on reveal and on scroll animations. Thanks to this project, I solidified my knowledge of React, Styled Components and learned how to use gsap.",
-  "learn-3": "During the creation of this project, I learned to create a full stack application, combining my front end (Javascript) and back end (NodeJS, Express, MongoDB) knowledge. I now know how to connect my page (front end) with my server (back end). Thanks to this project, I solidified my knowledge in JavaScript and NodeJS."
+  "learn-3": "During the creation of this project, I learned to create a full stack application, combining my front end (Javascript) and back end (NodeJS, Express, MongoDB) knowledge. I now know how to connect my page (front end) with my server (back end). Thanks to this project, I solidified my knowledge in JavaScript and NodeJS.",
+  "experience1": "My missions were to improve and develop new features for the existing applications. Working mainly on the company's website (React) and on the mobile application (React Native). But also to develop a new project, a marketplace (Next.js)..",
+  "experience2": "During my mission at Cyclofix, I learned to work in a team, by exchanging with the designer on the good integration of the model. By collaborating with the back-end developers to correctly set up the API, but above all, I exchanged a lot with my front-end colleague for the distribution of work, the good practices of git / github and peer programming. I also developed my technical skills. By consolidating my knowledge in React, React Native and Next.js. But also by learning to work with a design system and to modify it using Styled System."
 }

@@ -5,6 +5,7 @@ import Header from '../HomeSections/Header';
 import Projects from '../HomeSections/Projects';
 import Skills from '../HomeSections/Skills';
 import Navbar from '../HomeSections/Navbar';
+import Experience from '../HomeSections/Experience';
 
 const HomePage = () => {
   const [preloader, setPreload] = useState(true);
@@ -44,6 +45,7 @@ const HomePage = () => {
       <Navbar />
       <Header />
       <About />
+      <Experience />
       <Projects />
       <Skills />
       <Contact />

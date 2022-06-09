@@ -8,16 +8,6 @@ import SplitText from '../../utils/Split3.min';
 const Header = () => {
   const { t } = useTranslation();
 
-  const handleScroll = (to) => {
-    const el = document.getElementById(to);
-    let position = el.offsetTop;
-
-    window.scrollTo({
-      left: 0,
-      top: position,
-    });
-  };
-
   useEffect(() => {
     const split = new SplitText('#header-title', {
       type: 'lines',
@@ -39,17 +29,16 @@ const Header = () => {
         {navData.map((item) => {
           const { id, title } = item;
           return (
-            <div className={`link ${title}`} key={id}>
-              <li className='scroll-link ' onClick={() => handleScroll(title)}>
+            <li key={id}>
+              <a href={`#${title}`}>
                 <span>0{id} / </span>
                 {t(title)}
-              </li>
-
-              <li className='scroll-link' onClick={() => handleScroll(title)}>
+              </a>
+              <a href={`#${title}`}>
                 <span>0{id} / </span>
                 {t(title)}
-              </li>
-            </div>
+              </a>
+            </li>
           );
         })}
       </ul>
@@ -78,7 +67,7 @@ const Wrapper = styled.header`
     gap: 20px;
   }
 
-  .link {
+  li {
     position: relative;
     overflow: hidden;
     height: 18px;
@@ -90,7 +79,7 @@ const Wrapper = styled.header`
     }
 
     &:hover {
-      li {
+      a {
         transform: translateY(120%);
 
         &:last-child {
@@ -100,7 +89,7 @@ const Wrapper = styled.header`
     }
   }
 
-  li {
+  a {
     width: fit-content;
     position: absolute;
     font-size: 16px;
@@ -108,6 +97,7 @@ const Wrapper = styled.header`
     font-weight: 600;
     color: var(--dark-grey-color);
     transition: transform 0.4s ease;
+    text-decoration: none;
 
     &:last-child {
       transform: translateY(-120%);
@@ -119,11 +109,6 @@ const Wrapper = styled.header`
     }
   }
 
-  .special-li {
-    position: relative;
-    opacity: 0;
-  }
-
   .lineParent {
     overflow: hidden;
     .lineChildren {
@@ -132,11 +117,11 @@ const Wrapper = styled.header`
   }
 
   @media (min-width: 1000px) {
-    li {
+    a {
       font-size: 20px;
     }
 
-    .link {
+    li {
       width: 253px;
     }
   }
