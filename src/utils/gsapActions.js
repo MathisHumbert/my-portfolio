@@ -12,30 +12,36 @@ export const scrollHorizontal = (elem, container) => {
       pin: true,
       scrub: true,
       end: () => `+=${container.offsetWidth}`,
-      markers: true,
     },
   });
 };
 
-export const slideInTitle = (elem) => {
-  const timelineIn = gsap.timeline({ delay: 0.5 });
+export const slideInPreloader = (elemTitle, elemText) => {
+  const animateOut = gsap.timeline({ delay: 2 });
 
-  timelineIn.set(elem, { autoAlpha: 1 });
+  animateOut.to(elemTitle, {
+    duration: 1.5,
+    ease: 'expo.out',
+    y: '100%',
+    stagger: 0.1,
+  });
 
-  elem.forEach((line, index) => {
-    timelineIn.fromTo(
-      line,
-      {
-        y: '100%',
-      },
-      {
-        duration: 1.5,
-        delay: index * 0.2,
-        ease: 'expo.out',
-        y: '0%',
-      },
-      0
-    );
+  animateOut.to(
+    elemText,
+    {
+      duration: 1.5,
+      ease: 'expo.out',
+      y: '100%',
+      stagger: 0.1,
+    },
+    '-=1.4'
+  );
+
+  animateOut.to('.preloader', {
+    duration: 1.5,
+    ease: 'expo.out',
+    scaleY: 0,
+    transformOrigin: '100% 100%',
   });
 };
 
@@ -82,15 +88,11 @@ export const slideElemTop = (elem, trig) => {
 export const slideTextTop = (elem, trig) => {
   gsap.fromTo(
     elem,
+    { autoAlpha: 0, delay: 1 },
     {
-      opacity: 0,
-      y: '200%',
-    },
-    {
-      duration: 1,
-      opacity: 1,
-      y: 0,
-      delai: 0.4,
+      autoAlpha: 1,
+      duration: 2,
+      ease: 'expo.out',
       scrollTrigger: {
         trigger: trig,
         start: 'top center',

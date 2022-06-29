@@ -1,4 +1,3 @@
-import { useState, useRef, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -6,52 +5,24 @@ import data from '../utils/projectData';
 import Header from '../components/project/Header';
 import Content from '../components/project/Content';
 import BackHome from '../components/project/BackHome';
+import Preloader from '../components/shared/Preloader';
 
 const ProjectPage = () => {
-  const [preloader, setPreload] = useState(true);
-  const [timer, setTimer] = useState(1);
-
-  const time = useRef(null);
-
-  const clear = () => {
-    window.clearInterval(time.current);
-    setPreload(false);
-  };
-
-  useEffect(() => {
-    time.current = window.setInterval(() => {
-      setTimer((time) => time - 1);
-    }, 1000);
-    return () => clear();
-  }, []);
-
-  useEffect(() => {
-    if (timer === 0) {
-      clear();
-    }
-  }, [timer]);
-
   let { id } = useParams();
   id = Number(id) - 1;
   const tempData = data[id];
 
-  if (preloader) {
-    return (
-      <div className='loader-wrapper absolute'>
-        <h1>project {id + 1}</h1>
-        <h2>{tempData.title}</h2>
-      </div>
-    );
-  }
-
   return (
-    <Wrapper className='section'>
-      <BackHome />
-      <Header {...tempData} />
-      <img src={tempData.img} alt='' />
-      <Content {...tempData} />
-      <section></section>
-    </Wrapper>
+    <>
+      <Preloader title={`project ${id + 1}`} text={tempData.title} />
+      <Wrapper className='section'>
+        <BackHome />
+        <Header {...tempData} />
+        <img src={tempData.img} alt='' />
+        <Content {...tempData} />
+        <section></section>
+      </Wrapper>
+    </>
   );
 };
 

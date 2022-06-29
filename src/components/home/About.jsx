@@ -60,14 +60,16 @@ const Wrapper = styled.section`
     line-height: 1.4;
   }
 
+  span {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+
   @media (min-width: 1000px) {
     .content {
       grid-template-columns: 1fr 3fr;
       align-items: center;
-    }
-
-    p {
-      font-size: 32px;
     }
 
     h3 {
@@ -80,7 +82,7 @@ const Wrapper = styled.section`
   }
   @media (min-width: 1440px) {
     p {
-      font-size: 48px;
+      font-size: 32px;
     }
   }
 `;

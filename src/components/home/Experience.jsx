@@ -14,7 +14,6 @@ const Experience = () => {
       <img src={logo} alt='cyclofix' />
       <h3>2022 - Paris</h3>
       <p>{t('experience1')}</p>
-      <p>{t('experience2')}</p>
     </Wrapper>
   );
 };

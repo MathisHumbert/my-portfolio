@@ -1,29 +1,10 @@
-import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
 import { navData } from '../../utils/data';
-import { slideInTitle } from '../../utils/gsapActions';
-import { split } from '../../utils/text';
 
 const Header = () => {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    const element = document.getElementById('header-title');
-
-    split({
-      element: element,
-    });
-
-    split({
-      element: element,
-    });
-
-    const elementLinesSpans = element.querySelectorAll('span span');
-
-    slideInTitle(elementLinesSpans);
-  }, []);
 
   return (
     <Wrapper>
@@ -61,12 +42,6 @@ const Wrapper = styled.header`
     font-size: 12vw;
     font-weight: 600;
     text-align: center;
-  }
-
-  span {
-    display: inline-block;
-    overflow: hidden;
-    vertical-align: top;
   }
 
   ul {
