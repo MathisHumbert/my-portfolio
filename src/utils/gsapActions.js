@@ -12,16 +12,30 @@ export const scrollHorizontal = (elem, container) => {
       pin: true,
       scrub: true,
       end: () => `+=${container.offsetWidth}`,
+      markers: true,
     },
   });
 };
 
 export const slideInTitle = (elem) => {
-  gsap.to(elem, {
-    duration: 1,
-    y: 0,
-    opacity: 1,
-    stagger: 0.1,
+  const timelineIn = gsap.timeline({ delay: 0.5 });
+
+  timelineIn.set(elem, { autoAlpha: 1 });
+
+  elem.forEach((line, index) => {
+    timelineIn.fromTo(
+      line,
+      {
+        y: '100%',
+      },
+      {
+        duration: 1.5,
+        delay: index * 0.2,
+        ease: 'expo.out',
+        y: '0%',
+      },
+      0
+    );
   });
 };
 

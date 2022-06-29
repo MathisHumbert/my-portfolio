@@ -9,7 +9,7 @@ import Experience from '../HomeSections/Experience';
 
 const HomePage = () => {
   const [preloader, setPreload] = useState(true);
-  const [timer, setTimer] = useState(3);
+  const [timer, setTimer] = useState(1);
 
   const id = useRef(null);
 

@@ -3,23 +3,25 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { navData } from '../../utils/data';
 import { slideInTitle } from '../../utils/gsapActions';
-import SplitText from '../../utils/Split3.min';
+import { split } from '../../utils/text';
 
 const Header = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const split = new SplitText('#header-title', {
-      type: 'lines',
-      linesClass: 'lineChildren',
+    const element = document.getElementById('header-title');
+
+    split({
+      element: element,
     });
 
-    new SplitText('#header-title', {
-      type: 'lines',
-      linesClass: 'lineParent',
+    split({
+      element: element,
     });
 
-    slideInTitle(split.lines);
+    const elementLinesSpans = element.querySelectorAll('span span');
+
+    slideInTitle(elementLinesSpans);
   }, []);
 
   return (
@@ -58,6 +60,12 @@ const Wrapper = styled.header`
     font-size: 12vw;
     font-weight: 600;
     text-align: center;
+  }
+
+  span {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
   }
 
   ul {
