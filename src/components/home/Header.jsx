@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+
 import { navData } from '../../utils/data';
 import { slideInTitle } from '../../utils/gsapActions';
 import { split } from '../../utils/text';

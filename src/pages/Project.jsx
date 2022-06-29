@@ -1,10 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
+
 import data from '../utils/projectData';
-import Header from '../ProjectSections/Header';
-import Content from '../ProjectSections/Content';
-import BackHome from '../ProjectSections/BackHome';
+import Header from '../components/project/Header';
+import Content from '../components/project/Content';
+import BackHome from '../components/project/BackHome';
 
 const ProjectPage = () => {
   const [preloader, setPreload] = useState(true);

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+
 import { projectsData } from '../../utils/data';
 import SingleVerProject from './SingleVerProject';
 

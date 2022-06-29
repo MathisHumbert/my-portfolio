@@ -1,6 +1,6 @@
+import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { FaLink, FaGithub } from 'react-icons/fa';
-import styled from 'styled-components';
 
 const Header = ({ title, website, code }) => {
   const { t } = useTranslation();

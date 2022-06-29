@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+
 import { slideElemTop } from '../../utils/gsapActions';
 
-const Content = ({ data }) => {
+const SkillsContent = ({ data }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -79,4 +80,5 @@ const Wrapper = styled.article`
     }
   }
 `;
-export default Content;
+
+export default SkillsContent;

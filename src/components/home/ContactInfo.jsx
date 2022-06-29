@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+
 import { footerData } from '../../utils/data';
 
-const FooterInfo = () => {
+const ContactInfo = () => {
   const { t } = useTranslation();
 
   return (
@@ -110,4 +111,4 @@ const Wrapper = styled.footer`
   }
 `;
 
-export default FooterInfo;
+export default ContactInfo;

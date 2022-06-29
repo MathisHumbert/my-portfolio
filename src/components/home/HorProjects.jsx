@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
+
 import { scrollHorizontal } from '../../utils/gsapActions';
 import { projectsData } from '../../utils/data';
 import SingleHorProject from './SingleHorProject';

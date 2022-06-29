@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FaLink, FaGithub } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+
 import useOnScreen from '../../utils/useOnScreen';
 
 const SingleHorProject = ({

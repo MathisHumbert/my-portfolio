@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+
 import TextList from './TextList';
-import ArticleHeader from '../../components/ArticleHeader';
+import ArticleHeader from '../shared/ArticleHeader';
 
 const Content = ({
   header,

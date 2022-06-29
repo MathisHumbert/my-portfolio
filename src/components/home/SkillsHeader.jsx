@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+
 import { skillsHeaderData } from '../../utils/data';
 
-const Header = ({ activeSkill, setActiveSkill }) => {
+const SkillsHeader = ({ activeSkill, setActiveSkill }) => {
   return (
     <Wrapper>
       {skillsHeaderData.map((skill) => {
@@ -69,4 +70,5 @@ const Wrapper = styled.ul`
     margin-bottom: 50px;
   }
 `;
-export default Header;
+
+export default SkillsHeader;

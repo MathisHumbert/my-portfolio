@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import SectionHeader from '../../components/SectionHeader';
-import Header from './Header';
-import Content from './Content';
+
 import { frontEndData, backEndData, globalSkillsData } from '../../utils/data';
+import SectionHeader from '../shared/SectionHeader';
+import SkillsHeader from './SkillsHeader';
+import SkillsContent from './SkillsContent';
 
 const Skills = () => {
   const [activeSkill, setActiveSkill] = useState(1);
@@ -12,10 +13,13 @@ const Skills = () => {
     <Wrapper className='section' id='skills'>
       <header>
         <SectionHeader title='skills' />
-        <Header activeSkill={activeSkill} setActiveSkill={setActiveSkill} />
+        <SkillsHeader
+          activeSkill={activeSkill}
+          setActiveSkill={setActiveSkill}
+        />
       </header>
       <div className='skills-container'>
-        <Content
+        <SkillsContent
           data={
             activeSkill === 1
               ? frontEndData

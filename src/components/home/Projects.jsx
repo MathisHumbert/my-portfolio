@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+
 import HorProjects from './HorProjects';
 import VerProjects from './VerProjects';
-import SectionHeader from '../../components/SectionHeader';
+import SectionHeader from '../shared/SectionHeader';
 
 const Projects = () => {
   return (

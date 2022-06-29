@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import SectionHeader from '../../components/SectionHeader';
-import FooterInfo from './FooterInfo';
+
+import SectionHeader from '../shared/SectionHeader';
+import ContactInfo from './ContactInfo';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -29,7 +30,7 @@ const Contact = () => {
         mathishumbert71 @gmail.com
       </h1>
       {alert && <span>{t('copied')}</span>}
-      <FooterInfo />
+      <ContactInfo />
     </Wrapper>
   );
 };

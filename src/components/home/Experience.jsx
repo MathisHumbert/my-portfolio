@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
-import SectionHeader from '../../components/SectionHeader';
+import SectionHeader from '../shared/SectionHeader';
 import logo from '../../assets/cyclofix-logo.png';
 
 const Experience = () => {

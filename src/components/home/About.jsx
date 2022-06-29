@@ -1,9 +1,10 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+
 import img from '../../assets/mathis.png';
-import SectionHeader from '../../components/SectionHeader';
 import { slideImageTop, slideTextTop } from '../../utils/gsapActions';
-import { useEffect } from 'react';
+import SectionHeader from '../shared/SectionHeader';
 
 const About = () => {
   const { t } = useTranslation();
