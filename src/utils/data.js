@@ -85,7 +85,7 @@ export const frontEndData = [
   },
   {
     id: 3,
-    title: 'Netxt.js',
+    title: 'Next.js',
     icon: <SiNextdotjs />,
     color: '#222',
     time: '4',
