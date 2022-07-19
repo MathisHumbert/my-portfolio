@@ -6,10 +6,12 @@ const data = [
     id: 1,
     title: 'MERN Invoice App',
     img: mainImages.project1,
-    code: 'https://github.com/MathisHumbert/mern-invoice-app',
-    website: 'https://mern-invoice-app.herokuapp.com/',
+    code: 'https://github.com/MathisHumbert/invoice-app',
+    website: 'https://invoice-app-ts-mern.herokuapp.com/',
     header: 'header_text1',
     tech: [
+      'TypeScript',
+      'JavaScript',
       'React',
       'Redux',
       'Styled Components',
@@ -48,7 +50,7 @@ const data = [
     code: 'https://github.com/MathisHumbert/react-clone-skillex-website',
     website: 'https://cloned-skillex-webiste.netlify.app/',
     header: 'header_text2',
-    tech: ['React', 'Styled Components', 'GSAP', 'Context API'],
+    tech: ['JavaScript', 'React', 'Styled Components', 'GSAP', 'Context API'],
 
     challenges: ['p2_ch1', 'p2_ch2', 'p2_ch3', 'p2_ch4'],
     success: ['p2_su1', 'p2_su2', 'p2_su3', 'p2_su4'],

@@ -22,6 +22,7 @@ import {
   SiNextdotjs,
   SiFirebase,
   SiNpm,
+  SiTypescript,
 } from 'react-icons/si';
 
 import images from '../assets';
@@ -75,6 +76,13 @@ export const frontEndData = [
     icon: <SiJavascript />,
     color: '#f0db4f',
     time: '16',
+  },
+  {
+    id: 1,
+    title: 'TypeScript',
+    icon: <SiTypescript />,
+    color: '#3178C6',
+    time: '3',
   },
   {
     id: 2,
@@ -218,9 +226,9 @@ export const projectsData = [
     title: 'MERN Project',
     subtitle: 'Invoice App',
     category: 'Full Stack Project - Frontend Mentor',
-    tech: 'React / Redux / Styled Components / NodeJS / Express / MongoDB',
-    code: 'https://github.com/MathisHumbert/mern-invoice-app',
-    website: 'https://mern-invoice-app.herokuapp.com/',
+    tech: 'TypeScript / JavaScript / React / Redux / Styled Components / NodeJS / Express / MongoDB',
+    code: 'https://github.com/MathisHumbert/invoice-app',
+    website: 'https://invoice-app-ts-mern.herokuapp.com/',
   },
   {
     id: 2,
@@ -228,7 +236,7 @@ export const projectsData = [
     title: 'React Landing Page',
     subtitle: 'Skillex',
     category: 'Front End Project - cloned website from Dribbble',
-    tech: 'React / Styled Components / GSAP',
+    tech: 'JavaScript / React / Styled Components / GSAP',
     code: 'https://github.com/MathisHumbert/react-clone-skillex-website',
     website: 'https://cloned-skillex-webiste.netlify.app/',
   },
