@@ -13,7 +13,7 @@ const ProjectPage = () => {
 
   let { id } = useParams();
   id = Number(id) - 1;
-  const tempData = data[id];
+  const projectData = data[id];
 
   useEffect(() => {
     setLoading(true);
@@ -24,15 +24,15 @@ const ProjectPage = () => {
   }, [id]);
 
   if (loading) {
-    return <Preloader title={`project ${id + 1}`} text={tempData.title} />;
+    return <Preloader title={`project ${id + 1}`} text={projectData.title} />;
   }
 
   return (
     <Wrapper className='section'>
       <BackHome />
-      <Header {...tempData} />
-      <img src={tempData.img} alt={tempData.title} />
-      <Content {...tempData} />
+      <Header {...projectData} />
+      <img src={projectData.img} alt={projectData.title} />
+      <Content {...projectData} />
     </Wrapper>
   );
 };

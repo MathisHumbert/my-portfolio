@@ -21,7 +21,7 @@ const HorProjects = () => {
       <div className='project-counter'>
         <span>0{counter}</span>
         <span className='divider' />
-        <span>03</span>
+        <span>05</span>
       </div>
       {projectsData.map((project) => {
         return (
@@ -43,7 +43,7 @@ const Wrapper = styled.div`
   flex-wrap: nowrap;
   height: 80vh;
   padding: 10vh 0;
-  width: 300%;
+  width: 500%;
   position: relative;
 
   .project-counter {

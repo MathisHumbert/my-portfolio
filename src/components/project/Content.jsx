@@ -11,6 +11,7 @@ const Content = ({
   success,
   codeExamples,
   learn,
+  isReady,
 }) => {
   const { t } = useTranslation();
 
@@ -23,18 +24,22 @@ const Content = ({
         <ArticleHeader title='technologies' />
         <TextList text={tech} />
       </article>
-      <article>
-        <ArticleHeader title='chal' />
-        <TextList text={challenges} />
-      </article>
-      <article>
-        <ArticleHeader title='suc' />
-        <TextList text={success} code={codeExamples} />
-      </article>
-      <article>
-        <ArticleHeader title='learning' />
-        <p>{t(learn)}</p>
-      </article>
+      {isReady && (
+        <>
+          <article>
+            <ArticleHeader title='chal' />
+            <TextList text={challenges} />
+          </article>
+          <article>
+            <ArticleHeader title='suc' />
+            <TextList text={success} code={codeExamples} />
+          </article>
+          <article>
+            <ArticleHeader title='learning' />
+            <p>{t(learn)}</p>
+          </article>
+        </>
+      )}
     </Wrapper>
   );
 };

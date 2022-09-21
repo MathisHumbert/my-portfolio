@@ -1,8 +1,18 @@
 const data = [
   {
     id: 1,
+    title: 'Next.Js App',
+    img: '/assets/project-1.jpeg',
+    category: 'Full Stack Project - Frontend Mentor',
+    website: 'https://task-manager-self.vercel.app/register',
+    header: 'header_text1',
+    tech: ['TypeScript', 'Next.Js', 'Sass', 'SWR', 'Next Auth', 'MongoDB'],
+    isReady: false,
+  },
+  {
+    id: 2,
     title: 'MERN Invoice App',
-    img: '/assets/project-1.jpg',
+    img: '/assets/project-2.jpeg',
     code: 'https://github.com/MathisHumbert/invoice-app',
     website: 'https://invoice-app-ts-mern.herokuapp.com/',
     header: 'header_text1',
@@ -16,7 +26,6 @@ const data = [
       'Express',
       'MongoDB',
     ],
-
     challenges: ['p1_ch1', 'p1_ch2', 'p1_ch3', 'p1_ch4', 'p1_ch5'],
     success: [
       'p1_su1',
@@ -39,32 +48,31 @@ const data = [
       '/assets/code/code-8.png',
     ],
     learn: 'learn-1',
-  },
-  {
-    id: 2,
-    title: 'React Landing Page',
-    img: '/assets/project-2.jpg',
-    code: 'https://github.com/MathisHumbert/react-clone-skillex-website',
-    website: 'https://cloned-skillex-webiste.netlify.app/',
-    header: 'header_text2',
-    tech: ['JavaScript', 'React', 'Styled Components', 'GSAP', 'Context API'],
-
-    challenges: ['p2_ch1', 'p2_ch2', 'p2_ch3', 'p2_ch4'],
-    success: ['p2_su1', 'p2_su2', 'p2_su3', 'p2_su4'],
-    codeExamples: [
-      '/assets/code/code-9.png',
-      '/assets/code/code-10.png',
-      '/assets/code/code-11.png',
-    ],
-    learn: 'learn-2',
+    isReady: true,
   },
   {
     id: 3,
+    title: 'React E-Commerce',
+    img: '/assets/project-3.jpeg',
+    code: 'https://github.com/MathisHumbert/audiophile-shop',
+    website: 'https://heroic-bombolone-1f02fb.netlify.app/',
+    header: 'header_text3',
+    tech: [
+      'TypeScript',
+      'React',
+      'Redux',
+      'Styled Components',
+      'React Hook Form',
+    ],
+    isReady: false,
+  },
+  {
+    id: 4,
     title: 'Full Stack JavaScript Product Feedback App',
-    img: '/assets/project-3.jpg',
+    img: '/assets/project-4.jpeg',
     code: 'https://github.com/MathisHumbert/product-feedback-full-stack-app',
     website: 'https://product-feedback-fullstack-app.herokuapp.com/',
-    header: 'header_text3',
+    header: 'header_text4',
     tech: ['JavaScript', 'Sass', 'HTML', 'NodeJS', 'Express', 'MongoDB'],
 
     challenges: ['p3_ch1', 'p3_ch2', 'p3_ch3', 'p3_ch4', 'p3_ch5', 'p3_ch6'],
@@ -78,6 +86,26 @@ const data = [
       '/assets/code/code-17.png',
     ],
     learn: 'learn-3',
+    isReady: true,
+  },
+  {
+    id: 5,
+    title: 'React Landing Page',
+    img: '/assets/project-5.jpeg',
+    code: 'https://github.com/MathisHumbert/react-clone-skillex-website',
+    website: 'https://cloned-skillex-webiste.netlify.app/',
+    header: 'header_text5',
+    tech: ['JavaScript', 'React', 'Styled Components', 'GSAP', 'Context API'],
+
+    challenges: ['p2_ch1', 'p2_ch2', 'p2_ch3', 'p2_ch4'],
+    success: ['p2_su1', 'p2_su2', 'p2_su3', 'p2_su4'],
+    codeExamples: [
+      '/assets/code/code-9.png',
+      '/assets/code/code-10.png',
+      '/assets/code/code-11.png',
+    ],
+    learn: 'learn-2',
+    isReady: true,
   },
 ];
 
