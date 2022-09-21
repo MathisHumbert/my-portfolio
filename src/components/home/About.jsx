@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
-import img from '../../assets/mathis.png';
 import { slideImageTop, slideTextTop } from '../../utils/gsapActions';
 import SectionHeader from '../shared/SectionHeader';
 
@@ -20,7 +19,7 @@ const About = () => {
       <div className='content'>
         <div className='left'>
           <h3>{t('me')}</h3>
-          <img src={img} alt='mathis-img' id='about-img' />
+          <img src='./assets/mathis.png' alt='mathis-img' id='about-img' />
         </div>
         <div className='right'>
           <p id='about-text'>{t('about_text')}</p>
@@ -46,7 +45,7 @@ const Wrapper = styled.section`
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
-    font-family: 'Syncopate', sans-serif;
+    font-family: var(--font-synco);
   }
 
   img {
@@ -77,7 +76,7 @@ const Wrapper = styled.section`
       text-transform: uppercase;
       font-weight: 600;
       letter-spacing: 1px;
-      font-family: 'Syncopate', sans-serif;
+      font-family: var(--font-synco);
     }
   }
   @media (min-width: 1440px) {

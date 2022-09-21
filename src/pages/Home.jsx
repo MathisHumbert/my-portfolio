@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import About from '../components/home/About';
 import Contact from '../components/home/Contact';
 import Header from '../components/home/Header';
@@ -8,9 +10,21 @@ import Experience from '../components/home/Experience';
 import Preloader from '../components/shared/Preloader';
 
 const HomePage = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 3500);
+  }, []);
+
+  if (loading) {
+    return <Preloader title='mathis humbert' text='portfolio' />;
+  }
   return (
     <>
-      <Preloader title='mathis humbert' text='portfolio' />
       <Navbar />
       <Header />
       <About />

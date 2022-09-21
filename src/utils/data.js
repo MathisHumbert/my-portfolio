@@ -25,8 +25,6 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 
-import images from '../assets';
-
 export const navData = [
   {
     id: 1,
@@ -78,63 +76,63 @@ export const frontEndData = [
     time: '16',
   },
   {
-    id: 1,
+    id: 2,
     title: 'TypeScript',
     icon: <SiTypescript />,
     color: '#3178C6',
     time: '3',
   },
   {
-    id: 2,
+    id: 3,
     title: 'React',
     icon: <SiReact />,
     color: '#61dbfb',
     time: '12',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Next.js',
     icon: <SiNextdotjs />,
     color: '#222',
     time: '4',
   },
   {
-    id: 4,
+    id: 5,
     title: 'React Native',
     icon: <SiReact />,
     color: '#61dbfb',
     time: '6',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Redux',
     icon: <SiRedux />,
     color: '#764abc',
     time: '12',
   },
   {
-    id: 6,
+    id: 7,
     title: 'HTML',
     icon: <SiHtml5 />,
     color: '#f06529',
     time: '18',
   },
   {
-    id: 7,
+    id: 8,
     title: 'CSS',
     icon: <SiCss3 />,
     color: '#2965f1',
     time: '18',
   },
   {
-    id: 8,
+    id: 9,
     title: 'Styled C.',
     icon: <SiStyledcomponents />,
     color: '#222',
     time: '12',
   },
   {
-    id: 9,
+    id: 10,
     title: 'Sass',
     icon: <SiSass />,
     color: '#cc6699',
@@ -222,7 +220,7 @@ export const globalSkillsData = [
 export const projectsData = [
   {
     id: 1,
-    src: images.project1,
+    src: '/assets/project-1.jpg',
     title: 'MERN Project',
     subtitle: 'Invoice App',
     category: 'Full Stack Project - Frontend Mentor',
@@ -232,7 +230,7 @@ export const projectsData = [
   },
   {
     id: 2,
-    src: images.project2,
+    src: '/assets/project-2.jpg',
     title: 'React Landing Page',
     subtitle: 'Skillex',
     category: 'Front End Project - cloned website from Dribbble',
@@ -242,7 +240,7 @@ export const projectsData = [
   },
   {
     id: 3,
-    src: images.project3,
+    src: '/assets/project-3.jpg',
     title: 'Full Stack JavaScript',
     subtitle: 'Product Feedback',
     category: 'Full Stack Project - Frontend Mentor',

@@ -52,17 +52,17 @@ const Wrapper = styled.footer`
     transition: background 0.3s ease;
 
     &:hover {
-      background: #222;
+      background: var(--black-color);
 
       a {
-        color: #fff;
+        color: var(--white-color);
       }
     }
   }
 
   a {
     font-size: 22px;
-    color: #222;
+    color: var(--black-color);
     width: 100%;
     height: 100%;
     display: grid;
@@ -76,8 +76,8 @@ const Wrapper = styled.footer`
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
-    font-family: 'Syncopate', sans-serif;
-    color: #626262;
+    font-family: var(--font-synco);
+    color: var(--dark-grey-color);
   }
 
   h3 {

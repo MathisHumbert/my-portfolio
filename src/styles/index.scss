@@ -15,15 +15,21 @@
   --dark-grey-color: #626262;
   --grey-color: #bac4b8;
   --light-grey-color: #dbd8d6;
-  --red-color: #d53f41;
+  --white-color: #fff;
+  --black-color: #222;
+  --background-color: #f5f0ec;
 }
 
 #root {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #f5f0ec;
+  background: var(--background-color);
   font-family: var(--font-pop);
 }
 
@@ -36,8 +42,8 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  font-family: 'Syncopate', sans-serif;
-  color: #626262;
+  font-family: var(--font-synco);
+  color: var(--dark-grey-color);
   margin-bottom: 25px;
 }
 
@@ -46,8 +52,8 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
-  font-family: 'Syncopate', sans-serif;
-  color: #626262;
+  font-family: var(--font-synco);
+  color: var(--dark-grey-color);
   margin-bottom: 12px;
 }
 
@@ -68,7 +74,7 @@ body {
   h1 {
     font-size: 3vw;
     text-transform: uppercase;
-    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: var(--font-bai);
     font-weight: 600;
   }
 
@@ -79,7 +85,7 @@ body {
   h2 {
     font-size: 3vw;
     text-transform: uppercase;
-    font-family: 'Bodoni Moda', serif;
+    font-family: var(--font-bodo);
     font-style: italic;
     margin-top: 10px;
     display: inline-block;

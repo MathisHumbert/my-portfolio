@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
 import SectionHeader from '../shared/SectionHeader';
-import logo from '../../assets/cyclofix-logo.png';
 
 const Experience = () => {
   const { t } = useTranslation();
@@ -11,7 +10,7 @@ const Experience = () => {
     <Wrapper className='section' id='experience'>
       <SectionHeader title='experience' />
       <h1>{t('dev')}</h1>
-      <img src={logo} alt='cyclofix' />
+      <img src='./assets/cyclofix-logo.png' alt='cyclofix' />
       <h3>2022 - Paris</h3>
       <p>{t('experience1')}</p>
     </Wrapper>

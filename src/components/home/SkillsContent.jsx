@@ -9,7 +9,8 @@ const SkillsContent = ({ data }) => {
 
   useEffect(() => {
     slideElemTop('#all-skills div', '#skills');
-  });
+  }, [data]);
+
   return (
     <>
       {data.map((item) => {

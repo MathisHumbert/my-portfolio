@@ -37,7 +37,7 @@ const Wrapper = styled.div`
     }
 
     &:hover {
-      color: #222;
+      color: var(--black-color);
 
       .icon {
         transform: translateX(-10px);

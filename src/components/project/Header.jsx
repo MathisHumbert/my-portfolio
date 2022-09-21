@@ -51,7 +51,7 @@ const Wrapper = styled.header`
     transition: color 0.4s ease;
 
     &:hover {
-      color: #222;
+      color: var(--black-color);
     }
   }
 

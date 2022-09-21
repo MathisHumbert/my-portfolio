@@ -56,7 +56,7 @@ const Wrapper = styled.div`
     line-height: 16px;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
-    color: #dbd8d6;
+    color: var(--light-grey-color);
 
     .divider {
       content: '';
